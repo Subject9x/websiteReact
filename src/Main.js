@@ -2,8 +2,12 @@ import React, { Component } from 'react';
 import { createBrowserHistory } from "history";
 import { Route, Router, Switch } from 'react-router-dom';
 
-import HomePage from "./components/home/HomePage";
-import GaragePage from "./components/codeGarage/GaragePage";
+import HomePage from './components/home/HomePage';
+import GaragePage from './components/codeGarage/GaragePage';
+import ArtworkMainPage from './components/artwork/ArtworkMainPage';
+import BoardGamesMainPage from './components/boardgames/BoardGamesMainPage';
+import NetworkPage from './components/network/NetworkPage';
+import AboutPage from './components/AboutPage';
 
 /*
 WebsiteReact
@@ -19,7 +23,11 @@ const routing=(
     <Router history={history} >
         <Switch>
             <Route path="/" exact component={HomePage}/>
-            <Route path="/garage" component={GaragePage}/>
+            <Route path="/garage" exact component={GaragePage}/>
+            <Route path="/artwork" exact component={ArtworkMainPage}/>
+            <Route path="/boardgames" exact component={BoardGamesMainPage}/>
+            <Route path="/network" exact component={NetworkPage}/>
+            <Route path="/about" exact component={AboutPage}/>
         </Switch>
     </Router>
 )
@@ -27,7 +35,6 @@ const routing=(
 class Main extends Component{
     render(){
         return(
-            <div>here's a nav bar</div>,
             routing
         );
     }

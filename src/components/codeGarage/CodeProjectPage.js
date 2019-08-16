@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Button } from 'reactstrap';
-import Label from 'reactstrap/lib/Label';
+import { Container } from 'reactstrap';
+import NavHeader from '../NavHeader';
+
 /*
 WebsiteReact
 Peter Roohr
@@ -9,8 +10,9 @@ Overview:
 */
 export class CodeProjectPage extends Component {
     render() {
-        return (<Container>
-            
+        return (
+        <Container>
+            <NavHeader />
         </Container>);
     }
 }

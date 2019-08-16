@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {Row, Col } from 'reactstrap';
+import {Row, Col, Button } from 'reactstrap';
+import { Link } from 'react-router-dom';
 /*
 WebsiteReact
 Peter Roohr
@@ -14,11 +15,13 @@ class NavHeader extends Component{
     render(){
         return(
             <Row>
-                <Col md={{ size: 2}}> </Col>
+                <Col md={{ size: 2}}><Link to="/"><Button>Home</Button></Link></Col>
+                <Col md={{ size: 2}}><Link to="/garage"><Button>Code Garage</Button></Link></Col>
+                <Col md={{ size: 2}}><Link to="/artwork"><Button>Artwork</Button></Link></Col>
+                <Col md={{ size: 2}}><Link to="/boardgames"><Button>Board Games</Button></Link></Col>
+                <Col md={{ size: 2}}><Link to="/network"><Button>Network</Button></Link></Col>
+                <Col md={{ size: 2}}><Link to="/about"><Button>About</Button></Link></Col>
             </Row>
-            <div>
-                This is the nav bar
-            </div>
         );
     }
 }
