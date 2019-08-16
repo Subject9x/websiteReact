@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import BillBoard from '../billboard/BillBoard';
 import { Container, Row, Col, Button} from 'reactstrap';
+import {Link} from 'react-router-dom'
 
 /*
 WebsiteReact
@@ -20,13 +20,12 @@ class HomePage extends Component{
                 <Row><Col><p></p></Col></Row>
                 <Row>
                     <Col md={{ size: 6, offset: 3 }}>
-                    <BillBoard />
                     </Col>
                 </Row>
                 <Row><Col><p></p></Col></Row>
                 <Row><Col><p></p></Col></Row>
                 <Row>
-                    <Col md={{ size: 2 }}><Button><img alt="[Code Work]" src='/img/thumbs/codeThumb.png'></img></Button></Col>
+                    <Col md={{ size: 2 }}><Button><Link to="/garage"><img alt="[Code Work]" src='/img/thumbs/codeThumb.png'></img></Link></Button></Col>
                     <Col md={{ size: 2, offset: 2 }}><Button><img alt="[Artwork]" src='/img/thumbs/artThumb.png'></img></Button></Col>
                     <Col md={{ size: 2 , offset: 3}}><Button><img alt="[Board Games]" src='/img/thumbs/tableThumb.png'></img></Button></Col>
                 </Row>
@@ -41,5 +40,7 @@ class HomePage extends Component{
         );
     }
 }
+
+
 
 export default HomePage;

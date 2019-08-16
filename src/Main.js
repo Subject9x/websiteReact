@@ -1,28 +1,34 @@
+import React, { Component } from 'react';
+import { createBrowserHistory } from "history";
+import { Route, Router, Switch } from 'react-router-dom';
+
+import HomePage from "./components/home/HomePage";
+import GaragePage from "./components/codeGarage/GaragePage";
+
 /*
 WebsiteReact
 Peter Roohr
 Overview:
-    main js entry point
+    main js entry point,
+    probably not need
 */
-import React, { Component } from 'react';
-import { Route, NavLink, HashRouter } from 'react-router-dom';
-import { Button, Container, Col, Row } from 'reactstrap';
-import HomePage from "./components/home/HomePage"
+
+const history= createBrowserHistory();
+
+const routing=(
+    <Router history={history} >
+        <Switch>
+            <Route path="/" exact component={HomePage}/>
+            <Route path="/garage" component={GaragePage}/>
+        </Switch>
+    </Router>
+)
 
 class Main extends Component{
     render(){
         return(
-            <HashRouter>
-                <div>
-                    <h1> simple</h1>
-                    <ul className="header">
-                        <li><NavLink to="/">Home</NavLink></li>
-                    </ul>
-                    <div className="content">
-                        <Route path="/" component={HomePage}/>
-                    </div>
-                </div>
-            </HashRouter>
+            <div>here's a nav bar</div>,
+            routing
         );
     }
 }

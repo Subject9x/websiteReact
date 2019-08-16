@@ -2,11 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './index.css';
-
-import Main from "./Main"
-import HomePage from './components/home/HomePage';
+import Main from './Main';
 
 ReactDOM.render(
-    <HomePage/>,
+    <Main />,
     document.getElementById('root')
 );
