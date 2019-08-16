@@ -8,11 +8,17 @@ Peter Roohr
 Overview:
     Project Page is the main template for code projects selected from the Garage.js
 */
+
+
 export class CodeProjectPage extends Component {
+    constructor(props){
+    var t = props.id;   
+    }
     render() {
         return (
         <Container>
             <NavHeader />
+
         </Container>);
     }
 }

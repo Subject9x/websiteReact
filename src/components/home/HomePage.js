@@ -17,21 +17,19 @@ class HomePage extends Component{
                         <h1>Roohr Orbital Yards</h1>
                     </Col>
                 </Row>
-                <Row><Col><p></p></Col></Row>
+                &nbsp;
                 <Row>
                     <Col md={{ size: 6, offset: 3 }}>
                     </Col>
                 </Row>
-                <Row><Col><p></p></Col></Row>
-                <Row><Col><p></p></Col></Row>
+                &nbsp;
+                &nbsp;
                 <Row>
                     <Col md={{ size: 2 }}><Button><Link to="/garage"><img alt="[Code Work]" src='/img/thumbs/codeThumb.png'></img></Link></Button></Col>
                     <Col md={{ size: 2, offset: 2 }}><Button><Link to="/artwork"><img alt="[Artwork]" src='/img/thumbs/artThumb.png'></img></Link></Button></Col>
                     <Col md={{ size: 2 , offset: 3}}><Button><Link to="/boardgames"><img alt="[Board Games]" src='/img/thumbs/tableThumb.png'></img></Link></Button></Col>
                 </Row>
-                <Row>
-                    <Col><p></p></Col>
-                </Row>
+                &nbsp;
                 <Row>
                     <Col md={{ size: 2, offset: 3 }}><Button><Link to="/about">About</Link></Button></Col>
                     <Col md={{ size: 2, offset: 1}}><Button><Link to="/network"><img alt="[Other Sites]" src='/img/thumbs/netThumb.png'></img></Link></Button></Col>
@@ -40,7 +38,4 @@ class HomePage extends Component{
         );
     }
 }
-
-
-
 export default HomePage;
