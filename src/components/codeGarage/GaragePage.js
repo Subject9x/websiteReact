@@ -27,7 +27,7 @@ const GameProjectSpot = (props) =>{
     return(
     <Media>
         <Media left>
-            <Media object data-source={props.imagePath} alt=""/>
+            <Media object data-source={props.imagePath} src={props.imagePath} alt="placeholder"/>
         </Media>
         <Media body>
             <Media heading >{props.projectName}</Media>
@@ -63,10 +63,15 @@ class GaragePage extends Component{
                     <GameProjectSpot projectName="battleMETAL" projectDesc="A retro Mech-sim FPS built on the Quake enine source-port known as Darkplaces." />
                 </Col>
                 <Col md={{size:3}}>
-                    <GameProjectSpot projectName="battleMETAL Website" projectDesc="The complete website for the battleMETAL video game." />
+                    <GameProjectSpot projectName="Website - battleMETAL" projectDesc="The complete website for the battleMETAL video game." />
                 </Col>
                 <Col md={{size:3}}>
                     <GameProjectSpot projectName="LANDWAR Unit Calculator" projectDesc="A web-native stat calculator for the tabletop wargame 'LANDWAR'." />
+                </Col>
+            </Row>
+            <Row>
+                <Col md={{size:3, offset:3}}>
+                    <GameProjectSpot projectName="Website - LANDWAR" projectDesc="Main website for the tabletop wargame of same name. Website provides resources for gameplay and information." />
                 </Col>
             </Row>
             &nbsp;
@@ -80,10 +85,13 @@ class GaragePage extends Component{
                     </Card>
                 </Col>
                 <Col md={{size:3}}>
-                    <GameProjectSpot projectName="Zond 1" projectDesc="Video game, written in Java on the Slick2D framework. Asteroids-inspired gameplay." />
+                    <GameProjectSpot imagePath='/img/projectsCode/zondThumb.png'projectName="Zond 1" projectDesc="Video game, written in Java on the Slick2D framework. Asteroids-inspired gameplay." />
                 </Col>
                 <Col md={{size:3}}>
-                    <GameProjectSpot projectName="Roohrsite-Original" projectDesc="Built using just Bootstrap, my original website layout." />
+                    <GameProjectSpot imagePath='/img/projectsCode/roohrsite1Thumb.png' projectName="Website - Original" projectDesc="Built using just Bootstrap, my original website layout." />
+                </Col>
+                <Col md={{size:3}}>
+                    <GameProjectSpot imagePath='/img/projectsCode/strikerAlphaThumb.png' projectName="App - Striker Alpha" projectDesc="Unofficial game aide for the Battletech:Alpha Strike tabletop game, made using AngularJS." />
                 </Col>
             </Row>
             &nbsp;
@@ -99,7 +107,7 @@ class GaragePage extends Component{
                     </Card>
                 </Col>
                 <Col md={{size:3}}>
-                    <GameProjectSpot projectName="BattleRigs" projectDesc="A rough test of the BabylonJS game engine." />
+                    <GameProjectSpot imagePath='/img/projectsCode/rigsThumb_gray.png' projectName="BattleRigs" projectDesc="A rough test of the BabylonJS game engine." />
                 </Col>
                 <Col md={{size:3}}>
                     <GameProjectSpot imagePath='/img/projectsCode/bt2dThumb.png' projectName='MW2D:Mercs' projectDesc='An attempt to create a top-down mech-based action game using Java, and the LWJGL framework.'/>

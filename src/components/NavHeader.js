@@ -9,6 +9,8 @@ Overview:
     maintains buttons for quick navigation.
 
     this is meant to be included in a parent component's Container stack.
+
+    TODO - make sure this is stickied at the top
 */
 
 class NavHeader extends Component{

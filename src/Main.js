@@ -8,6 +8,7 @@ import ArtworkMainPage from './components/artwork/ArtworkMainPage';
 import BoardGamesMainPage from './components/boardgames/BoardGamesMainPage';
 import NetworkPage from './components/network/NetworkPage';
 import AboutPage from './components/AboutPage';
+import CodeProjectPage from './components/codeGarage/CodeProjectPage';
 
 /*
 WebsiteReact
@@ -28,6 +29,7 @@ const routing=(
             <Route path="/boardgames" exact component={BoardGamesMainPage}/>
             <Route path="/network" exact component={NetworkPage}/>
             <Route path="/about" exact component={AboutPage}/>
+            <Route path="/garage/project" component={CodeProjectPage}/>
         </Switch>
     </Router>
 )
