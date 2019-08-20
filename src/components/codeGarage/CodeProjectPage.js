@@ -3,7 +3,7 @@ import { Container, Row, Col, ListGroup, ListGroupItem } from 'reactstrap';
 import NavHeader from '../NavHeader';
 import { withRouter } from 'react-router';
 
-let codeProjectData = require('../../data/projects/codeProjectData.json');
+import codeProjectData from '../../data/projects/codeProjectData.json';
 
 
 /*
@@ -25,16 +25,15 @@ Overview:
 export class CodeProjectPage extends Component {
     constructor(props) {
         super(props);
-        let projectData = codeProjectData[props.id];
-        console.log(props.id);
+        let scrub = codeProjectData.projectData[props.match.params.id];
+        //TODO - get JSON data loaded lcoally, right now it pulls correctly
     }
     render() {
-
         return (
         <Container>
             <NavHeader />
             &nbsp;
-            <CodeProjectPanelHeader/>
+            <CodeProjectPanelHeader title={scrub.title} />
             &nbsp;
             <Row>
                 <Col md={{size:4, offset:1}}><CodeProjectPanelTeam/></Col>
