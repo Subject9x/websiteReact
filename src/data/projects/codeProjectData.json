@@ -1,0 +1,31 @@
+{ "projectData" :[
+{
+    "title" : "project",
+    "subtitle": "subtitle",
+    "url" : "project url",
+    "date" : "a date",
+    "team" : ["a", "list", "of", "peeps"],
+    "tech" : [
+        {"tech":"url stack"}, 
+        {"tech2":"url stack2"}
+    ],
+    "features": ["big", "time", "rimbo", "features"],
+    "desc" : "a description",
+    "media" : [{"media_row1":[], "media_row2":[]}]
+},
+
+{
+    "title" : "project2",
+    "subtitle": "subtitle",
+    "url" : "project url",
+    "date" : "a date",
+    "team" : ["a", "list", "of", "peeps"],
+    "tech" : [
+        {"tech":"url stack"}, 
+        {"tech2":"url stack2"}
+    ],
+    "features": ["big", "time", "rimbo", "features"],
+    "desc" : "a description",
+    "media" : [{"media_row1":[], "media_row2":[]}]
+}
+]}

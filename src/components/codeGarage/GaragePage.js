@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import {Route, Router, Switch} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import { Container, Row, Col, Button, Label, Card, CardBody, CardTitle, CardText, Media} from 'reactstrap';
-import { createBrowserHistory } from "history";
 
 import NavHeader from '../NavHeader'
+import CodeProjectPage from './CodeProjectPage';
 
 /*
 WebsiteReact
@@ -12,28 +12,20 @@ Overview:
     Garage page is the main entry point for all the projects, users can browse by project. Each project is 
 */
 
-const localHistoryVar = createBrowserHistory();
-
-const garageRouter=(
-    <Router history={localHistoryVar} >
-        <Switch>
-
-        </Switch>
-    </Router>
-)
-
 //oh, nifty
 const GameProjectSpot = (props) =>{
     return(
-    <Media>
-        <Media left>
-            <Media object data-source={props.imagePath} src={props.imagePath} alt="placeholder"/>
+    <Link to={'/garage/project/'+props.id} id={props.id} >
+        <Media>
+            <Media left>
+                <Media object data-source={props.imagePath} src={props.imagePath} alt="placeholder"/>
+            </Media>
+            <Media body>
+                <Media heading >{props.projectName}</Media>
+                {props.projectDesc}
+            </Media>
         </Media>
-        <Media body>
-            <Media heading >{props.projectName}</Media>
-            {props.projectDesc}
-        </Media>
-    </Media>
+    </Link>
     );
 }
 
@@ -60,18 +52,18 @@ class GaragePage extends Component{
                     </Card>
                 </Col>
                 <Col md={{size:3}}>
-                    <GameProjectSpot projectName="battleMETAL" projectDesc="A retro Mech-sim FPS built on the Quake enine source-port known as Darkplaces." />
+                    <GameProjectSpot projectName="battleMETAL" projectLinkId="0" projectDesc="A retro Mech-sim FPS built on the Quake enine source-port known as Darkplaces." />
                 </Col>
                 <Col md={{size:3}}>
-                    <GameProjectSpot projectName="Website - battleMETAL" projectDesc="The complete website for the battleMETAL video game." />
+                    <GameProjectSpot projectName="Website - battleMETAL" projectLinkId="1" projectDesc="The complete website for the battleMETAL video game." />
                 </Col>
                 <Col md={{size:3}}>
-                    <GameProjectSpot projectName="LANDWAR Unit Calculator" projectDesc="A web-native stat calculator for the tabletop wargame 'LANDWAR'." />
+                    <GameProjectSpot projectName="LANDWAR Unit Calculator" projectLinkId="2" projectDesc="A web-native stat calculator for the tabletop wargame 'LANDWAR'." />
                 </Col>
             </Row>
             <Row>
                 <Col md={{size:3, offset:3}}>
-                    <GameProjectSpot projectName="Website - LANDWAR" projectDesc="Main website for the tabletop wargame of same name. Website provides resources for gameplay and information." />
+                    <GameProjectSpot projectName="Website - LANDWAR" projectLinkId="3" projectDesc="Main website for the tabletop wargame of same name. Website provides resources for gameplay and information." />
                 </Col>
             </Row>
             &nbsp;
@@ -85,13 +77,13 @@ class GaragePage extends Component{
                     </Card>
                 </Col>
                 <Col md={{size:3}}>
-                    <GameProjectSpot imagePath='/img/projectsCode/zondThumb.png'projectName="Zond 1" projectDesc="Video game, written in Java on the Slick2D framework. Asteroids-inspired gameplay." />
+                    <GameProjectSpot imagePath='/img/projectsCode/zondThumb.png' projectLinkId="4" projectName="Zond 1" projectDesc="Video game, written in Java on the Slick2D framework. Asteroids-inspired gameplay." />
                 </Col>
                 <Col md={{size:3}}>
-                    <GameProjectSpot imagePath='/img/projectsCode/roohrsite1Thumb.png' projectName="Website - Original" projectDesc="Built using just Bootstrap, my original website layout." />
+                    <GameProjectSpot imagePath='/img/projectsCode/roohrsite1Thumb.png' projectLinkId="5" projectName="Website - Original" projectDesc="Built using just Bootstrap, my original website layout." />
                 </Col>
                 <Col md={{size:3}}>
-                    <GameProjectSpot imagePath='/img/projectsCode/strikerAlphaThumb.png' projectName="App - Striker Alpha" projectDesc="Unofficial game aide for the Battletech:Alpha Strike tabletop game, made using AngularJS." />
+                    <GameProjectSpot imagePath='/img/projectsCode/strikerAlphaThumb.png' projectLinkId="6" projectName="App - Striker Alpha" projectDesc="Unofficial game aide for the Battletech:Alpha Strike tabletop game, made using AngularJS." />
                 </Col>
             </Row>
             &nbsp;
@@ -107,10 +99,10 @@ class GaragePage extends Component{
                     </Card>
                 </Col>
                 <Col md={{size:3}}>
-                    <GameProjectSpot imagePath='/img/projectsCode/rigsThumb_gray.png' projectName="BattleRigs" projectDesc="A rough test of the BabylonJS game engine." />
+                    <GameProjectSpot imagePath='/img/projectsCode/rigsThumb_gray.png' projectLinkId="7" projectName="BattleRigs" projectDesc="A rough test of the BabylonJS game engine." />
                 </Col>
                 <Col md={{size:3}}>
-                    <GameProjectSpot imagePath='/img/projectsCode/bt2dThumb.png' projectName='MW2D:Mercs' projectDesc='An attempt to create a top-down mech-based action game using Java, and the LWJGL framework.'/>
+                    <GameProjectSpot imagePath='/img/projectsCode/bt2dThumb.png' projectLinkId="8" projectName='MW2D:Mercs' projectDesc='An attempt to create a top-down mech-based action game using Java, and the LWJGL framework.'/>
                 </Col>
             </Row>
             &nbsp;

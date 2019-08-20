@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, ListGroup, ListGroupItem } from 'reactstrap';
 import NavHeader from '../NavHeader';
+import { withRouter } from 'react-router';
+
+let codeProjectData = require('../../data/projects/codeProjectData.json');
+
 
 /*
 WebsiteReact
@@ -16,8 +20,36 @@ Overview:
     team
     tech
     media
-
 */
+
+export class CodeProjectPage extends Component {
+    constructor(props) {
+        super(props);
+        let projectData = codeProjectData[props.id];
+        console.log(props.id);
+    }
+    render() {
+
+        return (
+        <Container>
+            <NavHeader />
+            &nbsp;
+            <CodeProjectPanelHeader/>
+            &nbsp;
+            <Row>
+                <Col md={{size:4, offset:1}}><CodeProjectPanelTeam/></Col>
+                <Col md={{size:4, offset:2}}><CodeProjectPanelTech/></Col>
+            </Row>
+            &nbsp;
+            <CodeProjectPanelFeatures/>
+            &nbsp;
+            <CodeProjectPanelMediaSection />
+            <CodeProjectPanelLongDescription/>
+        </Container>);
+    }
+}
+export default withRouter(CodeProjectPage);
+
 
 /*
     Projec header
@@ -26,12 +58,12 @@ Overview:
         -release date
         -url
 */
-const CodeProjectPanelHeader = () =>{
+const CodeProjectPanelHeader = (props) =>{
     return(
     <Row>
         <Col md={{size:1, offset:1}}><img src="/img/projectsCode/roohrsite1Thumb.png" alt="an icon"/></Col>
-        <Col md={{size:3}}><h2>Project Title</h2></Col>
-        <Col md={{size:2}}>Release Date</Col>
+        <Col md={{size:3}}><h2>{props.title}</h2></Col>
+        <Col md={{size:2}}>Release Date: date</Col>
         <Col md={{size:4}}><h4>the url</h4></Col>
     </Row>
     );
@@ -43,8 +75,8 @@ const CodeProjectPanelHeader = () =>{
 const CodeProjectPanelTeam = () =>{
     return(
         <Container>
-            <Row><Col sm={{size:10, offset:1}}><h3>A description</h3></Col></Row>
-            <Row>Desc</Row>
+            <Row><Col sm={{size:10, offset:1}}><h3>Team of peeps</h3></Col></Row>
+            <Row>List of teamers</Row>
         </Container>
     );
 }
@@ -74,6 +106,11 @@ const CodeProjectPanelFeatures = () =>{
         <Row>
             <Col md={{size:10, offset:1}}>
                 list of core features to go here
+                <ListGroup>
+                    <ListGroupItem>
+                        A list item
+                    </ListGroupItem>
+                </ListGroup>
             </Col>
         </Row>
         <Row>
@@ -85,26 +122,35 @@ const CodeProjectPanelFeatures = () =>{
     );
 }
 
-export class CodeProjectPage extends Component {
-
-    render() {
-        return (
+/*
+    Json data should be 2D array of media objects,
+        allowable objets
+            -> image, expandable
+            -> youtube link frame
+            -? maybe allow for some label text
+*/
+const CodeProjectPanelMediaSection = () =>{
+    return(
         <Container>
-            <NavHeader />
-            &nbsp;
-            <CodeProjectPanelHeader/>
-            &nbsp;
             <Row>
-                <Col md={{size:4, offset:1}}><CodeProjectPanelTeam/></Col>
-                <Col md={{size:4, offset:2}}><CodeProjectPanelTech/></Col>
+                <Col md={{size:10, offset:1}}>X by Y grid of media objects</Col>
             </Row>
-            &nbsp;
-            <CodeProjectPanelFeatures />
-            &nbps;
-            <Row>
-                <Col md={{size:3, offset:1}}><h3>Media</h3></Col>
-            </Row>
-        </Container>);
-    }
+        </Container>
+    );
 }
-export default CodeProjectPage;
+
+/*
+    The long-form description is only needed if the project needs a big description
+*/
+const CodeProjectPanelLongDescription = () =>{
+    return(
+        <Container>
+            <Row>
+                <Col md={{size:8, offset:2}}>
+                    A longer description of the project if this is required, run a check on the json data to see if its neeeded.
+                </Col>
+            </Row>
+        </Container>
+
+    )
+}

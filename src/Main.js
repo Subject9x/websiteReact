@@ -29,7 +29,7 @@ const routing=(
             <Route path="/boardgames" exact component={BoardGamesMainPage}/>
             <Route path="/network" exact component={NetworkPage}/>
             <Route path="/about" exact component={AboutPage}/>
-            <Route path="/garage/project" component={CodeProjectPage}/>
+            <Route path="/garage/project/:id"  render={props => {return <CodeProjectPage {...props}/>;}}/>
         </Switch>
     </Router>
 )
