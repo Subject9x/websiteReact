@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import { Container, Row, Col, Button, Label, Card, CardBody, CardTitle, CardText, Media} from 'reactstrap';
-
 import NavHeader from '../NavHeader'
-import CodeProjectPage from './CodeProjectPage';
 
 /*
 WebsiteReact
