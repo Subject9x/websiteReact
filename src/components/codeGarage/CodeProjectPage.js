@@ -10,9 +10,8 @@ WebsiteReact
 Peter Roohr
 Overview:
     Project Page is the main template for code projects selected from the Garage.js
-*/
-/*
-    Projec ttitle 
+
+    Project title 
     end date
     description
     website
@@ -23,8 +22,6 @@ Overview:
 
 class CodeProjectPage extends Component {
     render() {
-        /*console.log(this.props.match.params.id);*/
-        /*cconsole.log(ProjectDataCode);*/
         const theData = ProjectDataCode.data[this.props.match.params.id];
         if( theData === undefined){
             /* quick safety valve for null project data */
@@ -45,13 +42,16 @@ class CodeProjectPage extends Component {
             &nbsp;
             <Row>
                 <Col md={{size:4, offset:1}}><CodeProjectPanelTeam teamList={theData.team}/></Col>
-                <Col md={{size:4, offset:2}}><CodeProjectPanelTech/></Col>
+                <Col md={{size:4, offset:2}}><CodeProjectPanelTech techList={theData.tech}/></Col>
             </Row>
             &nbsp;
-            <CodeProjectPanelFeatures/>
+            <Row>
+                <CodeProjectPanelFeatures features={theData.features}/>
+            </Row>
+            
             &nbsp;
-            <CodeProjectPanelMediaSection />
-            <CodeProjectPanelLongDescription/>
+            <CodeProjectPanelMediaSection media={theData.mediaData}/> 
+            <CodeProjectPanelLongDescription descText={theData.desc}/>
         </Container>);
     }
 }
@@ -60,10 +60,7 @@ export default withRouter(CodeProjectPage);
 
 /*
 Project header
-    -icon
-    -title
-    -release date
-    -url
+    icon, title, release date, url
 */
 const CodeProjectPanelHeader = (props) =>{
     return(
@@ -77,52 +74,61 @@ const CodeProjectPanelHeader = (props) =>{
 }
 
 
-const CodeProjectPanelTeamListItem = (props) =>{
+const CodeProjectPanelInfoListItem = (props) =>{
     let rowData;
-    console.log('CodeProjectPanelTeamListItem:'+props.name +' '+ props.url);
-    if( props.url !== undefined){
-        rowData = <a href={props.url}>+ {props.name}</a>
+    if( props.listItemUrl !== undefined){
+        rowData = <a href={props.listItemUrl}>{props.listItemName}</a>
     }
     else{
-        rowData = props.name;
+        rowData = props.listItemName;
     }
     return(
-        <Row>
-            <Col md={{size:3, offset:2}}>{rowData}</Col>
-        </Row>
+        <ListGroupItem>{rowData}</ListGroupItem>
     )
 }
 
 /*
-    Panel that displays the team for the project,
-    and links to their website.
+Panel that displays the team for the project,
+and links to their website.
 */
 const CodeProjectPanelTeam = (props) =>{
-
     return(
         <Container>
-            <Row><Col sm={{size:10, offset:1}}><h3>Team of peeps</h3></Col></Row>
-            <Row>List of teamers</Row>
-            {props.teamList.map((team)=>{
-                return(
-                    <CodeProjectPanelTeamListItem name={team.name} url={team.url}/>
-                );
-            })}
+            <Row><Col sm={{size:10, offset:1}}><h3>Team and Links</h3></Col></Row>
+            <Row>
+                <Col md={{size:10, offset:0}}>
+                    <ListGroup>
+                        {props.teamList.map((team, index)=>{
+                            return(
+                                <CodeProjectPanelInfoListItem listItemName={team.name} listItemUrl={team.url} key={index}/>
+                            );
+                        })}
+                    </ListGroup>
+                </Col>
+
+            </Row>
         </Container>
     );
 }
 
 /*
-    Panel that displays the tech stack for the project.
-    Also links where possible
+Panel that displays the tech stack for the project.
+Also links where possible
 */
-const CodeProjectPanelTech = () =>{
+const CodeProjectPanelTech = (props) =>{
     return(
         <Container>
+            <Row><Col sm={{size:10, offset:1}}><h3>Tech and Tooling</h3></Col></Row>
             <Row>
-                <Col sm={{size:10, offset:1}}><h3>Tech Stack</h3></Col>
+                <Col md={{size:10, offset:0}}>
+                    <ListGroup>
+                        {props.techList.map((tech, index)=>{
+                            return(<CodeProjectPanelInfoListItem listItemName={tech.name} listItemUrl={tech.url} key={index}/>);
+                        })}
+                    </ListGroup>
+                </Col>
+
             </Row>
-            <Row>List of Techs</Row>
         </Container>
     );
 }
@@ -130,27 +136,26 @@ const CodeProjectPanelTech = () =>{
 /*
     semi-unlimited list of features for the project
 */
-const CodeProjectPanelFeatures = () =>{
-    return(
-    <Container>
-        <Row><Col md={{size:3, offset:1}}><h3>Core Features</h3></Col></Row>
-        <Row>
-            <Col md={{size:10, offset:1}}>
-                list of core features to go here
-                <ListGroup>
-                    <ListGroupItem>
-                        A list item
-                    </ListGroupItem>
-                </ListGroup>
-            </Col>
-        </Row>
-        <Row>
-            <Col>
-                make sure to do rows programmatically
-            </Col>
-        </Row>
-    </Container>
-    );
+const CodeProjectPanelFeatures = (props) =>{
+    if(props.features.length <= 0){
+        return(null);
+    }
+    else{
+        return(
+            <Container>
+                <Row><Col md={{size:3, offset:1}}><h3>Core Features</h3></Col></Row>
+                <Row>
+                    <Col md={{size:10, offset:1}}>
+                        <ListGroup>
+                            {props.features.map((feat, index)=>{
+                                return(<ListGroupItem key={index}>{feat}</ListGroupItem>);
+                            })}
+                        </ListGroup>
+                    </Col>
+                </Row>
+            </Container>
+            );
+    }
 }
 
 /*
@@ -160,28 +165,74 @@ const CodeProjectPanelFeatures = () =>{
             -> youtube link frame
             -? maybe allow for some label text
 */
-const CodeProjectPanelMediaSection = () =>{
-    return(
-        <Container>
+const CodeProjectPanelMediaSection = (props) =>{
+    if(props.media.length <= 0){
+        return(null);
+    }
+    else{
+        return(
+            <Row><Col md={{size:3, offset:1}}><h3>Media</h3></Col></Row>,
+            props.media.map((row, index) =>{
+                return(<CodeProjectPanelMediaSectionRow mediaRow={row} key={index}/>);
+            })
+        ); 
+    }
+}
+
+const CodeProjectPanelMediaSectionRow = (props) =>{
+    if(props.mediaRow.length <= 0){
+        return(null);
+    }
+    else{
+        return(
             <Row>
-                <Col md={{size:10, offset:1}}>X by Y grid of media objects</Col>
+                <Col md={{size:2}}></Col>
+                {props.mediaRow.map((item, index)=>{
+                    return(
+                        <CodeProjectPanelMediaSectionRowItem mediaItem={item} key={index}/>
+                    );
+                })}
             </Row>
-        </Container>
+        );
+    }
+}
+
+const CodeProjectPanelMediaSectionRowItem = (props) =>{
+    return(
+        <Col md={{size:3}}>{props.mediaItem}</Col>
+    );
+}
+
+/*
+Creates 1 paragraph section of the the data.desc[] piece.
+*/
+const CodeProjetPanelDescriptionParagraph = (props) =>{
+    return(
+        <Row>
+            <Col md={{size:10, offset:1}}>
+                <p>{props.textData}</p>
+            </Col>
+        </Row>
     );
 }
 
 /*
     The long-form description is only needed if the project needs a big description
 */
-const CodeProjectPanelLongDescription = () =>{
-    return(
-        <Container>
+const CodeProjectPanelLongDescription = (props) =>{
+    if(props.descText.length <= 0){
+        return(null);
+    }
+    else{
+        return(
             <Row>
-                <Col md={{size:8, offset:2}}>
-                    A longer description of the project if this is required, run a check on the json data to see if its neeeded.
-                </Col>
+                <Col md={{size:3, offset:1}}><h3>Description</h3></Col>
             </Row>
-        </Container>
-
-    )
+            {props.descText.map((textParagraph, index)=>{
+                return(
+                    <CodeProjetPanelDescriptionParagraph textData={textParagraph} key={index}/>
+                );
+          })}
+        );  
+    }
 }
