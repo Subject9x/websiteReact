@@ -63,6 +63,9 @@ class GaragePage extends Component{
                 <Col md={{size:3, offset:3}}>
                     <GameProjectSpot projectName="Website - LANDWAR" projectLinkId="3" projectDesc="Main website for the tabletop wargame of same name. Website provides resources for gameplay and information." />
                 </Col>
+                <Col md={{size:3}}>
+                    <GameProjectSpot imagePath='TODO' projectLinkId="9" projectName='Website - Rebuild 2019' projectDesc='Rebuilt my personal website from the ground up on ReactJS and ReactStrap.'/>
+                </Col>
             </Row>
             &nbsp;
             <Row>

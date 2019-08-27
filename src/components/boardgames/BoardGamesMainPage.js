@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Label} from 'reactstrap';
+import { Container, Label, Row} from 'reactstrap';
 import NavHeader from '../NavHeader';
 
 /*
@@ -21,7 +21,22 @@ class BoardGamesMainPage extends Component{
         return(
             <Container >
                 <NavHeader />
-                <Label>You've reached the Board Games.</Label>
+                <Row>
+                    <Label>You've reached the Board Games.</Label>
+                </Row>
+                <Row>
+                    <Label>
+                        Projects to fill out - TODO
+                    </Label>
+                </Row>
+                <Row>
+                    <ul>
+                        <li>Battlesuit</li>
+                        <li>LANDWAR</li>
+                        <li>PitFighter</li>
+                        <li>Warhammer 40k Kill Team Mod - Mech RPG</li>
+                    </ul>
+                </Row>
             </Container>
         );
     }

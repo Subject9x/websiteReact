@@ -68,7 +68,7 @@ const CodeProjectPanelHeader = (props) =>{
         <Col md={{size:1, offset:1}}><img src={props.thumb} alt="an icon"/></Col>
         <Col md={{size:3}}><h2>{props.title}</h2></Col>
         <Col md={{size:2}}>Release Date: {props.date}</Col>
-        <Col md={{size:4}}><a href={props.url}><h3>main website</h3></a></Col>
+        <Col md={{size:4}}><a href={props.url}  target="_"><h3>main website</h3></a></Col>
     </Row>
     );
 }
@@ -77,7 +77,7 @@ const CodeProjectPanelHeader = (props) =>{
 const CodeProjectPanelInfoListItem = (props) =>{
     let rowData;
     if( props.listItemUrl !== undefined){
-        rowData = <a href={props.listItemUrl}>{props.listItemName}</a>
+        rowData = <a href={props.listItemUrl} target="_">{props.listItemName}</a>
     }
     else{
         rowData = props.listItemName;
@@ -217,7 +217,7 @@ const CodeProjetPanelDescriptionParagraph = (props) =>{
 }
 
 /*
-    The long-form description is only needed if the project needs a big description
+The long-form description is only needed if the project needs a big description
 */
 const CodeProjectPanelLongDescription = (props) =>{
     if(props.descText.length <= 0){
@@ -225,14 +225,18 @@ const CodeProjectPanelLongDescription = (props) =>{
     }
     else{
         return(
+        <Container>
+
             <Row>
                 <Col md={{size:3, offset:1}}><h3>Description</h3></Col>
             </Row>
+            
             {props.descText.map((textParagraph, index)=>{
                 return(
                     <CodeProjetPanelDescriptionParagraph textData={textParagraph} key={index}/>
                 );
-          })}
+              })}
+        </Container>
         );  
     }
 }
