@@ -27,12 +27,12 @@ class CodeProjectPage extends Component {
         if( theData === undefined){
             /* quick safety valve for null project data */
             return(
-                <Container>
-                    <NavHeader />
-                    <Row>
-                        <Col><h2>Project data not found!</h2></Col>
-                    </Row>
-                </Container>
+            <Container>
+                <NavHeader />
+                <Row>
+                    <Col><h2>Project data not found!</h2></Col>
+                </Row>
+            </Container>
             );
         }
         return (
@@ -42,18 +42,17 @@ class CodeProjectPage extends Component {
             <CodeProjectPanelHeader thumb={theData.thumb} title={theData.title} date={theData.date} url={theData.url}/>
             &nbsp;
             <Row>
-                <Col md={{size:4, offset:1}}><CodeProjectPanelTeam teamList={theData.team}/></Col>
-                <Col md={{size:4, offset:2}}><CodeProjectPanelTech techList={theData.tech}/></Col>
+                <CodeProjectInfoPanelGroup team={theData.team} tech={theData.tech} links={theData.links} tooling={theData.tooling}/>
             </Row>
             &nbsp;
             <Row>
                 <CodeProjectPanelFeatures features={theData.features}/>
             </Row>
-            
             &nbsp;
             <CodeProjectPanelMediaSection media={theData.mediaData}/> 
             <CodeProjectPanelLongDescription descText={theData.desc}/>
-        </Container>);
+        </Container>
+        );
     }
 }
 export default withRouter(CodeProjectPage);
@@ -65,17 +64,17 @@ Project header
 */
 const CodeProjectPanelHeader = (props) =>{
     return(
-        <Container>
-            <Row>
-                <Col md={{size:1, offset:1}}><img src={props.thumb} alt="an icon"/></Col>
-                <Col md={{size:6}}><h2>{props.title}</h2></Col>
-            </Row>
-            &nbsp;
-            <Row>
-                <Col md={{size:6, offset:1}}><h4><b>Release Date:</b></h4>{props.date}</Col>
-                <Col md={{size:4, offset:1}}><a href={props.url}  target="_"><h3>main website</h3></a></Col>
-            </Row>
-        </Container>
+    <Container>
+        <Row>
+            <Col md={{size:1, offset:1}}><img src={props.thumb} alt="an icon"/></Col>
+            <Col md={{size:6}}><h2>{props.title}</h2></Col>
+        </Row>
+        &nbsp;
+        <Row>
+            <Col md={{size:6, offset:1}}><h4><b>Release Date:</b></h4>{props.date}</Col>
+            <Col md={{size:4, offset:1}}><a href={props.url}  target="_"><h3>main website</h3></a></Col>
+        </Row>
+    </Container>
     );
 }
 
@@ -92,51 +91,52 @@ const CodeProjectPanelInfoListItem = (props) =>{
     )
 }
 
-/*
-Panel that displays the team for the project,
-and links to their website.
-*/
-const CodeProjectPanelTeam = (props) =>{
-    return(
+const CodeProjectInfoPanel = (props) =>{
+    if(props.itemList !== undefined){
+        return(
         <Container>
-            <Row><Col sm={{size:10, offset:1}}><h3>Team and Links</h3></Col></Row>
+            <Row><Col sm={{size:10}}><h3>{props.title}</h3></Col></Row>
             <Row>
                 <Col md={{size:10, offset:0}}>
                     <ListGroup>
-                        {props.teamList.map((team, index)=>{
-                            return(
-                                <CodeProjectPanelInfoListItem listItemName={team.name} listItemUrl={team.url} key={index}/>
-                            );
+                        {props.itemList.map((item, index)=>{
+                            return(<CodeProjectPanelInfoListItem listItemName={item.name} listItemUrl={item.url} key={index}/>);
                         })}
                     </ListGroup>
                 </Col>
-
+    
             </Row>
         </Container>
-    );
+        );
+    }
+    else{
+        return(null);
+    }
 }
 
-/*
-Panel that displays the tech stack for the project.
-Also links where possible
-*/
-const CodeProjectPanelTech = (props) =>{
+const CodeProjectInfoPanelGroup = (props) =>{
     return(
-        <Container>
-            <Row><Col sm={{size:10, offset:1}}><h3>Tech and Tooling</h3></Col></Row>
-            <Row>
-                <Col md={{size:10, offset:0}}>
-                    <ListGroup>
-                        {props.techList.map((tech, index)=>{
-                            return(<CodeProjectPanelInfoListItem listItemName={tech.name} listItemUrl={tech.url} key={index}/>);
-                        })}
-                    </ListGroup>
-                </Col>
-
-            </Row>
-        </Container>
+    <Container>
+        <Row>
+            <Col md={{size:4, offset:1}}>
+                <CodeProjectInfoPanel title="Team" itemList={props.team} />
+            </Col>
+            <Col md={{size:4, offset:2}}>
+                <CodeProjectInfoPanel title="Tech" itemList={props.tech}/>
+            </Col>
+        </Row>
+        <Row>
+            <Col md={{size:4, offset:1}}>
+                <CodeProjectInfoPanel title="Links" itemList={props.links} />
+            </Col>
+            <Col md={{size:4, offset:2}}>
+                <CodeProjectInfoPanel title="Tooling" itemList={props.tooling}/>
+            </Col>
+        </Row>
+    </Container>
     );
 }
+
 
 /*
     semi-unlimited list of features for the project
@@ -147,19 +147,19 @@ const CodeProjectPanelFeatures = (props) =>{
     }
     else{
         return(
-            <Container>
-                <Row><Col md={{size:3, offset:1}}><h3>Core Features</h3></Col></Row>
-                <Row>
-                    <Col md={{size:10, offset:1}}>
-                        <ul>
-                            {props.features.map((feat, index)=>{
-                                return(<li key={index}>{feat}</li>);
-                            })}
-                        </ul>
-                    </Col>
-                </Row>
-            </Container>
-            );
+        <Container>
+            <Row><Col md={{size:3, offset:1}}><h3>Core Features</h3></Col></Row>
+            <Row>
+                <Col md={{size:10, offset:1}}>
+                    <ul>
+                        {props.features.map((feat, index)=>{
+                            return(<li key={index}>{feat}</li>);
+                        })}
+                    </ul>
+                </Col>
+            </Row>
+        </Container>
+        );
     }
 }
 

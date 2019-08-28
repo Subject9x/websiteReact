@@ -13,13 +13,18 @@ const ProjectDataCode = { "data" : [
     "date" : "Q4-2019",
     "team" : [
         {"name": "Peter Roohr"}, 
-        {"name": "Eamonn McHugh-Roohr", "url":"http://eamonnmr.com"},
+        {"name": "Eamonn McHugh-Roohr", "url":"http://eamonnmr.com"}
+    ],
+    "links" : [
         {"name": "battleMETAL on github", "url": "https://github.com/Subject9x/battleMETAL"},
         {"name": "Dev Blog", "url":"https://subjecttotesting.blogspot.com/2018/05/the-cold-rise-from-sleep.html"}
     ],
     "tech" : [
         {"name": "Quake", "url":"https://en.wikipedia.org/wiki/Quake_(video_game)"}, 
         {"name": "Darkplaces", "url":"https://icculus.org/twilight/darkplaces/"},
+
+    ],
+    "tooling" : [       
         {"name": "Trenchbroom", "url":"https://kristianduske.com/trenchbroom/"},
         {"name": "Milkshape", "url":"http://www.milkshape3d.com/"},
         {"name": "Blender", "url":"https://www.blender.org/"},
@@ -48,11 +53,15 @@ const ProjectDataCode = { "data" : [
     "date" : "Q4-2019",
     "team" : [
         {"name": "Peter Roohr"},
-        {"name": "website on github", "url": "https://github.com/Subject9x/battleMETAL_website"},
+    ],
+    "links" :[
+        {"name": "website on github", "url": "https://github.com/Subject9x/battleMETAL_website"}
     ],
     "tech" : [
         {"name": "Bootstrap UI", "url":"https://getbootstrap.com/"}, 
         {"name": "ReactJS", "url":"https://reactjs.org/"},
+    ],
+    "tooling" : [
         {"name": "Visual Code", "url" : "https://code.visualstudio.com/"}
     ],
     "features": ["Rebuilt static-bootstrap website to use ReactJS.",
@@ -73,12 +82,16 @@ const ProjectDataCode = { "data" : [
     "team" : [
         {"name": "Peter Roohr"}, 
         {"name": "Eamonn McHugh-Roohr", "url":"http://eamonnmr.com"},
-        {"name": "Nick Drost", "url":"https://github.com/ndrost21"},
+        {"name": "Nick Drost", "url":"https://github.com/ndrost21"}
+    ],
+    "links" : [
         {"name": "project on github", "url": "https://github.com/Subject9x/LANDWAR_unitBuilder"},
         {"name": "LANDWAR game", "url":"todo"}
     ],
     "tech" : [
-        {"name": "ReactJS", "url":"https://reactjs.org/"},
+        {"name": "ReactJS", "url":"https://reactjs.org/"}
+    ],
+    "tooling" :[
         {"name": "Visual Code", "url" : "https://code.visualstudio.com/"}
     ],
     "features": ["Game tool for LANDWAR players.",
@@ -123,6 +136,9 @@ const ProjectDataCode = { "data" : [
         {"name": "LWJGL", "url" : "https://www.lwjgl.org/"},
         {"name": "Slick2D", "url" : "http://slick.ninjacave.com/"},
         {"name": "XPP", "url" : "http://www.extreme.indiana.edu/xgws/xsoap/xpp/"}
+    ],
+    "tooling":[
+        {"name": "Gimp", "url":"https://www.gimp.org/"}
     ],
     "features": ["Customizable HUD",
                     "Customizable ships",
@@ -184,10 +200,11 @@ const ProjectDataCode = { "data" : [
         {"name": "Peter Roohr"}
     ],
     "tech" : [
-            {"name" : "BabylonJS", "url" : ""},
-            {"name": "Milkshape", "url":"http://www.milkshape3d.com/"},
-            {"name": "Gimp", "url":"https://www.gimp.org/"}
-
+        {"name" : "BabylonJS", "url" : ""}
+    ],
+    "tooling" :[
+        {"name": "Milkshape", "url":"http://www.milkshape3d.com/"},
+        {"name": "Gimp", "url":"https://www.gimp.org/"}
     ],
     "features": ["3D action-shooter with tanks.",
                     "Tile-data generated level geometry."
@@ -208,12 +225,16 @@ const ProjectDataCode = { "data" : [
     "team" : [
         {"name": "Peter Roohr"}
     ],
-    "tech" : [{"name":"Artemis ECS", "url":"http://gamadu.com/artemis/'"},
+    "tech" : [
+        {"name":"Artemis ECS", "url":"http://gamadu.com/artemis/'"},
         {"name":"Google GSON", "url" :"https://code.google.com/p/google-gson/"},
         {"name":"LWJGL", "url":"https://www.lwjgl.org/"},
-        {"name":"TileD", "url":"http://www.mapeditor.org/"},
         {"name":"TWL GUI", "url":"http://twl.l33tlabs.org/"}
 
+    ],
+    "tooling" :[
+        {"name":"TileD", "url":"http://www.mapeditor.org/"},
+        {"name": "Gimp", "url":"https://www.gimp.org/"}
     ],
     "features": ["Top-down, 2D action shooter.",
                     "Mech-based gameplay.",
@@ -235,7 +256,9 @@ const ProjectDataCode = { "data" : [
         {"name": "Peter Roohr"}
     ],
     "tech" : [
-        {"name": "ReactJS", "url":"https://reactjs.org/"},
+        {"name": "ReactJS", "url":"https://reactjs.org/"}
+    ],
+    "tooling" : [
         {"name": "Visual Code", "url" : "https://code.visualstudio.com/"}
     ],
     "features": ["Fully templated design for easy extensibilty",
