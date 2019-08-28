@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
-import { Container, Row, Col, Button} from 'reactstrap';
+import { Container, Row, Col, Button, Image} from 'reactstrap';
 import {Link} from 'react-router-dom'
+
+import styles from '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 /*
 WebsiteReact
@@ -28,16 +30,26 @@ class HomePage extends Component{
                 &nbsp;
                 &nbsp;
                 <Row>
-                    <Col md={{ size: 3, offset:2 }}><Button><Link to="/garage"><img alt="[Code Work]" src='/img/thumbs/codeThumb.png'></img></Link></Button></Col>
-                    <Col md={{ size: 3, offset:2 }}><Button><Link to="/artwork"><img alt="[Artwork]" src='/img/thumbs/artThumb.png'></img></Link></Button></Col>
+                    <Col md={{ size: 3, offset:2 }}><HomePageButtonType link="/garage" alt="[Code Work]" src='/img/thumbs/codeThumb.png'/></Col>
+                    <Col md={{ size: 3, offset:2 }}><HomePageButtonType link="/artwork" alt="[Artwork]" src='/img/thumbs/artThumb.png'/></Col>
                 </Row>
                 &nbsp;
                 <Row>
-                    <Col md={{ size: 3, offset:2 }}><Button><Link to="/boardgames"><img alt="[Board Games]" src='/img/thumbs/tableThumb.png'></img></Link></Button></Col>
-                    <Col md={{ size: 3, offset:2 }}><Button><Link to="/network"><img alt="[Other Sites]" src='/img/thumbs/netThumb.png'></img></Link></Button></Col>
+                    <Col md={{ size: 3, offset:2 }}><HomePageButtonType link="/boardgames" alt="[Board Games]" src='/img/thumbs/tableThumb.png'/></Col>
+                    <Col md={{ size: 3, offset:2 }}><HomePageButtonType link="/network" alt="[Other Sites]" src='/img/thumbs/netThumb.png'/></Col>
                 </Row>
             </Container>
         );
     }
 }
 export default HomePage;
+
+const styleHomePageButton = {
+    
+};
+
+const HomePageButtonType = (props) =>{
+    return(
+        <Link to={props.link}><img className="img-fluid rounded" alt={props.alt} src={props.src} /></Link>
+    );
+}

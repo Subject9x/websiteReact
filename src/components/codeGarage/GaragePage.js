@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import { Container, Row, Col, Button, Label, Card, CardBody, CardTitle, CardText, Media} from 'reactstrap';
+import { Container, Row, Col, Card, CardBody, CardTitle, CardText, Media} from 'reactstrap';
 import NavHeader from '../NavHeader'
 
 /*
@@ -34,7 +34,7 @@ class GaragePage extends Component{
             <NavHeader/>
             &nbsp;
             <Row>
-                <Col md={{size:4}}><img src='/img/thumbs/codeThumb.png' alt=''></img></Col>
+                <Col md={{size:4}}><img className="img-fluid rounded" src='/img/thumbs/codeThumb.png' alt=''></img></Col>
                 <Col md={{size:6}}>
                     <p>Here you will find all the freelance and hobby projects I've worked on so far.</p>
                 </Col>
@@ -105,13 +105,6 @@ class GaragePage extends Component{
                 <Col md={{size:3}}>
                     <GameProjectSpot imagePath='/img/projectsCode/bt2dThumb.png' projectLinkId="8" projectName='MW2D:Mercs' projectDesc='An attempt to create a top-down mech-based action game using Java, and the LWJGL framework.'/>
                 </Col>
-            </Row>
-            &nbsp;
-            <Row>
-                <Col md={{size:4}}></Col>
-
-
-
             </Row>
         </Container>
         );

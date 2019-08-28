@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, ListGroup, ListGroupItem, Label } from 'reactstrap';
+import { Container, Row, Col, ListGroup, ListGroupItem } from 'reactstrap';
 import NavHeader from '../NavHeader';
 import { withRouter } from 'react-router';
 
+import CommonImagePanel from '../common/CommonImagePanel'
 import ProjectDataCode from '../../data/projects/ProjectDataCode.js';
 
 /*
@@ -64,15 +65,19 @@ Project header
 */
 const CodeProjectPanelHeader = (props) =>{
     return(
-    <Row>
-        <Col md={{size:1, offset:1}}><img src={props.thumb} alt="an icon"/></Col>
-        <Col md={{size:3}}><h2>{props.title}</h2></Col>
-        <Col md={{size:2}}>Release Date: {props.date}</Col>
-        <Col md={{size:4}}><a href={props.url}  target="_"><h3>main website</h3></a></Col>
-    </Row>
+        <Container>
+            <Row>
+                <Col md={{size:1, offset:1}}><img src={props.thumb} alt="an icon"/></Col>
+                <Col md={{size:6}}><h2>{props.title}</h2></Col>
+            </Row>
+            &nbsp;
+            <Row>
+                <Col md={{size:6, offset:1}}><h4><b>Release Date:</b></h4>{props.date}</Col>
+                <Col md={{size:4, offset:1}}><a href={props.url}  target="_"><h3>main website</h3></a></Col>
+            </Row>
+        </Container>
     );
 }
-
 
 const CodeProjectPanelInfoListItem = (props) =>{
     let rowData;
@@ -146,11 +151,11 @@ const CodeProjectPanelFeatures = (props) =>{
                 <Row><Col md={{size:3, offset:1}}><h3>Core Features</h3></Col></Row>
                 <Row>
                     <Col md={{size:10, offset:1}}>
-                        <ListGroup>
+                        <ul>
                             {props.features.map((feat, index)=>{
-                                return(<ListGroupItem key={index}>{feat}</ListGroupItem>);
+                                return(<li key={index}>{feat}</li>);
                             })}
-                        </ListGroup>
+                        </ul>
                     </Col>
                 </Row>
             </Container>
@@ -166,7 +171,7 @@ const CodeProjectPanelFeatures = (props) =>{
             -? maybe allow for some label text
 */
 const CodeProjectPanelMediaSection = (props) =>{
-    if(props.media.length <= 0){
+    if(props.media === undefined || props.media.length <= 0){
         return(null);
     }
     else{
@@ -185,8 +190,7 @@ const CodeProjectPanelMediaSectionRow = (props) =>{
     }
     else{
         return(
-            <Row>
-                <Col md={{size:2}}></Col>
+            <Row className="justify-content-md-center">
                 {props.mediaRow.map((item, index)=>{
                     return(
                         <CodeProjectPanelMediaSectionRowItem mediaItem={item} key={index}/>
@@ -199,7 +203,9 @@ const CodeProjectPanelMediaSectionRow = (props) =>{
 
 const CodeProjectPanelMediaSectionRowItem = (props) =>{
     return(
-        <Col md={{size:3}}>{props.mediaItem}</Col>
+        <Col md={{size:3}}>
+            <CommonImagePanel src={props.mediaItem} alt="some alt" className="mw-100"/>
+        </Col>
     );
 }
 
@@ -220,7 +226,7 @@ const CodeProjetPanelDescriptionParagraph = (props) =>{
 The long-form description is only needed if the project needs a big description
 */
 const CodeProjectPanelLongDescription = (props) =>{
-    if(props.descText.length <= 0){
+    if(props.descText === undefined || props.descText.length <= 0){
         return(null);
     }
     else{

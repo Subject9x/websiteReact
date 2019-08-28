@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Container} from 'reactstrap';
+import {Modal} from 'reactstrap';
 /*
 WebsiteReact
 Peter Roohr
@@ -10,17 +10,36 @@ Overview:
 */
 
 class CommonImagePanel extends Component{
-  constructor(){
-    super();
-    this.setState({"clicked": 0});
-  }
-  render(){
-    //this.props.url = image url
-    //
-    return(
-      <Container>
+  constructor(props) {
+    super(props);
+    this.state = {
+      modal: false,
+      imgLarge : ''
+    };
 
-      </Container>
+    this.toggle = this.toggle.bind(this);
+  }
+
+  toggle() {
+    this.setState(prevState => ({
+      modal: !prevState.modal
+    }));
+  }
+
+  render() {
+    return (
+      <div>
+        <img className="img-thumbnail rounded" src={this.props.src} alt="none" onClick={this.toggle}/>
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+          <div class="container-fluid">
+            <div class="row justify-content-md-center">
+              <div class="col-md-auto">
+                <img  src={this.props.src} alt="none" onClick={this.toggle}/>
+              </div>
+            </div>
+          </div>
+        </Modal>
+      </div>
     );
   }
 }
