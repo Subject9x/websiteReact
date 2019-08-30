@@ -72,7 +72,7 @@ const CodeProjectPanelHeader = (props) =>{
         &nbsp;
         <Row>
             <Col md={{size:6, offset:1}}><h4><b>Release Date:</b></h4>{props.date}</Col>
-            <Col md={{size:4, offset:1}}><a href={props.url}  target="_"><h3>main website</h3></a></Col>
+            {(props)=>{if(props.url !== undefined){return(<Col md={{size:4, offset:1}}><a href={props.url}  target="_"><h3>main website</h3></a></Col>);}}}
         </Row>
     </Container>
     );

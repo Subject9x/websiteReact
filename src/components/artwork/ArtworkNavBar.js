@@ -24,7 +24,7 @@ class ArtworkNav extends Component{
         <Route path="/artwork/recoil" exact render={(props)=>{return(<ArtworkPageRecoilMain {...props}/>);}} />
         <Route path="/artwork/minis" exact render={(props)=>{return(<ArtworkPageMinisMain {...props}/>);}} />
         <Route path="/artwork/concepts" exact render={(props)=>{return(<ArtworkPageConceptsMain {...props}/>);}} />
-        <Route path="/artwork/models" exact render={(props)=>{return(<ArtworkPageModelsMain {...props}/>);}} />
+        <Route path="/artwork/3d" exact render={(props)=>{return(<ArtworkPageModelsMain {...props}/>);}} />
       </>
     );
   }

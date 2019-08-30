@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Label} from 'reactstrap';
+import { Container, Label, Row, Col } from 'reactstrap';
 
 import NavHeader from '../NavHeader';
 
@@ -15,10 +15,32 @@ Overview:
 class NetworkPage extends Component{
     render(){
         return(
-            <Container >
-                <NavHeader />
-                <Label>You've reached the Netowrking.</Label>
-            </Container>
+        <Container >
+            <NavHeader/>
+            &nbsp;
+            <Row>
+                <Col md={{size:4}}><img className="img-fluid rounded" src='/img/thumbs/netThumb.png' alt=''></img></Col>
+                <Col md={{size:6}}>
+                    <p>This section is for a quick goto for any and all important links that can be found across the rest of the website, but you don't need to dig for. </p>
+                </Col>
+            </Row>
+            &nbsp;
+            <Row>
+                <Col md={{size:2, offset:1}}><h4><a href="https://github.com/Subject9x" target="_">My github</a></h4></Col>
+                <Col md={{size:2}}><h4><a href="" target="_">Eamonn McHugh-Roohr</a></h4></Col>
+                <Col md={{size:2}}><h4><a href="http://battleMETAL.net" target="_">battleMETAL</a></h4></Col>
+                <Col md={{size:2}}><h4><a href="https://github.com/Subject9x/battleMETAL" target="_">battleMETAL Source Code</a></h4></Col>
+                <Col md={{size:2}}><h4><a href="https://github.com/Subject9x/battleMETAL_website" target="_">battleMETAL-Website</a></h4></Col>
+            </Row>
+            &nbsp;
+            <Row>
+                <Col md={{size:2, offset:1}}><h4><a href="https://subjecttotesting.blogspot.com/2018/05/the-cold-rise-from-sleep.html" target="_">battleMETAL Dev Blog</a></h4></Col>
+                <Col md={{size:2}}><h4><a href="" target="_">LANDWAR</a></h4></Col>
+                <Col md={{size:2}}><h4><a href="https://github.com/Subject9x/LANDWAR_unitBuilder" target="_">LANDWAR Unit Calculator source</a></h4></Col>
+                <Col md={{size:2}}><h4><a href="https://github.com/EamonnMR/Zond" target="_">Zond I Source Code</a></h4></Col>
+                <Col md={{size:2}}><h4><a href="" target="_"></a></h4></Col>
+            </Row>
+        </Container>
         );
     }
 }

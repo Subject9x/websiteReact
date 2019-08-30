@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Label, Row} from 'reactstrap';
+import { Container, Label, Row, Col} from 'reactstrap';
 import NavHeader from '../NavHeader';
 
 /*
@@ -19,25 +19,30 @@ Overview:
 class BoardGamesMainPage extends Component{
     render(){
         return(
-            <Container >
-                <NavHeader />
-                <Row>
-                    <Label>You've reached the Board Games.</Label>
-                </Row>
-                <Row>
-                    <Label>
-                        Projects to fill out - TODO
-                    </Label>
-                </Row>
-                <Row>
-                    <ul>
-                        <li>Battlesuit</li>
-                        <li>LANDWAR</li>
-                        <li>PitFighter</li>
-                        <li>Warhammer 40k Kill Team Mod - Mech RPG</li>
-                    </ul>
-                </Row>
-            </Container>
+        <Container >
+            <NavHeader/>
+            &nbsp;
+            <Row>
+                <Col md={{size:4}}><img className="img-fluid rounded" src='/img/thumbs/tableThumb.png' alt=''></img></Col>
+                <Col md={{size:6}}>
+                    <p>Here you will find all the freelance and hobby projects I've worked on so far.</p>
+                </Col>
+            </Row>
+            &nbsp;
+            <Row>
+                <Label>
+                    Projects to fill out - TODO
+                </Label>
+            </Row>
+            <Row>
+                <ul>
+                    <li>Battlesuit</li>
+                    <li>LANDWAR</li>
+                    <li>PitFighter</li>
+                    <li>Warhammer 40k Kill Team Mod - Mech RPG</li>
+                </ul>
+            </Row>
+        </Container>
         );
     }
 }

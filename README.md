@@ -1,3 +1,6 @@
+### Roohr's notes
+All the artwork in this repo is attributable to me, and cannot be used for any forks of this project.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

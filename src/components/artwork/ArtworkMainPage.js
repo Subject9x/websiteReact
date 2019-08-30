@@ -32,13 +32,13 @@ class ArtworkMainPage extends Component{
             </Row>
             &nbsp;
             <Row>
-                <Col md={{size:3, offset:2}}><ArtworkMainPageSectionBadge link="/artwork/recoil" section="Recoil" desc="A science-fiction universe of my own design; a mix of diesel-punk robots and World War 1 aesthetics." /></Col>
-                <Col md={{size:3, offset:2}}><ArtworkMainPageSectionBadge link="/artwork/concepts" section="Concept Art" desc="some of this has ended up in projects, other pieces were never used." /></Col>
+                <Col md={{size:4, offset:2}}><ArtworkMainPageSectionBadge link="/artwork/recoil" section="Recoil" desc="A science-fiction universe of my own design; a mix of diesel-punk robots and World War 1 aesthetics." /></Col>
+                <Col md={{size:4}}><ArtworkMainPageSectionBadge link="/artwork/concepts" section="Concept Art" desc="some of this has ended up in projects, other pieces were never used." /></Col>
             </Row>
             &nbsp;
             <Row>
-                <Col md={{size:3, offset:2}}><ArtworkMainPageSectionBadge link="/artwork/3d" section="3D Work" desc="I've spent some time working with low-polycount modeling, usually for my game projects." /></Col>
-                <Col md={{size:3, offset:2}}><ArtworkMainPageSectionBadge link="/artwork/minis" section="Miniatures" desc="I've spent some time working with low-polycount modeling, usually for my game projects." /></Col>
+                <Col md={{size:4, offset:2}}><ArtworkMainPageSectionBadge link="/artwork/3d" section="3D Work" desc="I've spent some time working with low-polycount modeling, usually for my game projects." /></Col>
+                <Col md={{size:4}}><ArtworkMainPageSectionBadge link="/artwork/minis" section="Miniatures" desc="I've spent some time working with low-polycount modeling, usually for my game projects." /></Col>
             </Row>
         </Container>
         );

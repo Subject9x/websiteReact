@@ -34,8 +34,9 @@ class ArtworkPageRecoilMain extends Component{
         </Row>
         &nbsp;
         <Row>
-          <Col md={{Size:2, offset:1}}>The Armor</Col>
+          <Col md={{Size:2, offset:1}}>The Armors</Col>
           <Col md={{size:2, offset:1}}>Characters</Col>
+          <Col md={{size:2}}>AFV's</Col>
         </Row>
       </Container>
     );

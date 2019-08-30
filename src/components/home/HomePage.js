@@ -27,13 +27,13 @@ class HomePage extends Component{
                 &nbsp;
                 &nbsp;
                 <Row>
-                    <Col md={{ size: 3, offset:2 }}><HomePageButtonType link="/garage" alt="[Code Work]" src='/img/thumbs/codeThumb.png'/></Col>
-                    <Col md={{ size: 3, offset:2 }}><HomePageButtonType link="/artwork/home" alt="[Artwork]" src='/img/thumbs/artThumb.png'/></Col>
+                    <Col md={{ size: 3, offset:3 }}><HomePageButtonType link="/garage" alt="[Code Work]" src='/img/thumbs/codeThumb.png'/></Col>
+                    <Col md={{ size: 3}}><HomePageButtonType link="/artwork/home" alt="[Artwork]" src='/img/thumbs/artThumb.png'/></Col>
                 </Row>
                 &nbsp;
                 <Row>
-                    <Col md={{ size: 3, offset:2 }}><HomePageButtonType link="/boardgames" alt="[Board Games]" src='/img/thumbs/tableThumb.png'/></Col>
-                    <Col md={{ size: 3, offset:2 }}><HomePageButtonType link="/network" alt="[Other Sites]" src='/img/thumbs/netThumb.png'/></Col>
+                    <Col md={{ size: 3, offset:3 }}><HomePageButtonType link="/boardgames" alt="[Board Games]" src='/img/thumbs/tableThumb.png'/></Col>
+                    <Col md={{ size: 3}}><HomePageButtonType link="/network" alt="[Other Sites]" src='/img/thumbs/netThumb.png'/></Col>
                 </Row>
             </Container>
         );

@@ -147,6 +147,9 @@ const ProjectDataCode = { "data" : [
     "tooling":[
         {"name": "Gimp", "url":"https://www.gimp.org/"}
     ],
+    "links":[
+        {"name":"github", "url":"https://github.com/EamonnMR/Zond"}
+    ],
     "features": ["Customizable HUD",
                     "Customizable ships",
                     "Space physics",
@@ -170,12 +173,16 @@ const ProjectDataCode = { "data" : [
         {"name": "Peter Roohr"}
     ],
     "tech" : [
+        {"name": "Bootstrap UI", "url":"https://getbootstrap.com/"}, 
     ],
     "features": ["Simple static website.",
                     "Quick stand-up."
                 ],
     "desc" : ["The original website I put up in 2015, built pretty much out of Bootstrap and jQuery. The website pretty basic, as I had just decided to take up Bootstrap a few months before hand. The website served ably enough for 5 years before being upgraded with React and a total rebuild in 2019. There were whole sections of the old website I never compeleted due to structural issues - issues mostly caused by being a very simple setup."],
-    "mediaData" : [["some","rows"], ["some","rows"]]
+    "mediaData" :[
+        ["/img/projectsCode/website2015/website2015_1.png", "/img/projectsCode/website2015/website2015_2.png"],
+        ["/img/projectsCode/website2015/website2015_3.png", "/img/projectsCode/website2015/website2015_4.png"]
+    ]
 },
 
 {
@@ -183,12 +190,15 @@ const ProjectDataCode = { "data" : [
     "subtitle": "",
     "url" : "todo",
     "thumb" : "/img/projectsCode/strikerAlphaThumb.png",
-    "date" : "OCT 2015",
+    "date" : "AUG 2015",
     "team" : [
         {"name": "Peter Roohr"}
     ],
     "tech" : [
         {"name":"AngularJS", "url":""}
+    ],
+    "links" : [
+        {"name" : "github", "url" : "https://github.com/Subject9x/StrikerAlphaToolkit"}
     ],
     "features": ["Game aide for Battletech:Alpha Strike.",
                     "Increases speed-of-play by automating calculations",
@@ -201,7 +211,9 @@ const ProjectDataCode = { "data" : [
                 "I never got the entire app completed, but I got the basic version of it functioning well enough, and even optimized the layout for mobile."
 
     ],
-    "mediaData" : [["some","rows"], ["some","rows"]]
+    "mediaData" : [["/img/projectsCode/strikeralpha/strikeralpha2.png","/img/projectsCode/strikeralpha/strikeralpha1.png"], 
+        ["/img/projectsCode/strikeralpha/strikeralpha3.png","/img/projectsCode/strikeralpha/strikeralpha4.png"]
+    ]
 },
 
 {
@@ -232,7 +244,6 @@ const ProjectDataCode = { "data" : [
 {
     "title" : "Mechwar2D:Mercenaries",
     "subtitle": "prototype",
-    "url" : "todo",
     "thumb" : "/img/projectsCode/bt2dThumb.png",
     "date" : "N/A",
     "team" : [
@@ -283,7 +294,6 @@ const ProjectDataCode = { "data" : [
         "Also the Visual Code IDE was pleasant to work with, its workspace managment being smooth to use. Configuring it to work with ES6 and JSX was simple enough, the plugin-oriented nature is one of Visual Code's strong points."
     ]
 }
-
 ]};
 
 export default ProjectDataCode;
