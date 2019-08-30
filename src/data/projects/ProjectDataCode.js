@@ -60,6 +60,7 @@ const ProjectDataCode = { "data" : [
     "tech" : [
         {"name": "Bootstrap UI", "url":"https://getbootstrap.com/"}, 
         {"name": "ReactJS", "url":"https://reactjs.org/"},
+        {"name":"todo-reactstrap", "url":""}
     ],
     "tooling" : [
         {"name": "Visual Code", "url" : "https://code.visualstudio.com/"}
@@ -76,7 +77,7 @@ const ProjectDataCode = { "data" : [
 {
     "title" : "LANDWAR - Unit Calculator",
     "subtitle": "",
-    "url" : "todo",
+    "url" : "",
     "thumb" : "todo",
     "date" : "Q4-2019",
     "team" : [
@@ -89,7 +90,8 @@ const ProjectDataCode = { "data" : [
         {"name": "LANDWAR game", "url":"todo"}
     ],
     "tech" : [
-        {"name": "ReactJS", "url":"https://reactjs.org/"}
+        {"name": "ReactJS", "url":"https://reactjs.org/"},
+        {"name":"todo-reactstrap", "url":""}
     ],
     "tooling" :[
         {"name": "Visual Code", "url" : "https://code.visualstudio.com/"}
@@ -113,11 +115,16 @@ const ProjectDataCode = { "data" : [
         {"name": "Peter Roohr"}
     ],
     "tech" : [
+        {"name": "ReactJS", "url":"https://reactjs.org/"},
+        {"name":"todo-reactstrap", "url":""}
+    ],
+    "tooling" :[
+        {"name": "Visual Code", "url" : "https://code.visualstudio.com/"}
     ],
     "features": ["todo",
                     "todo"
                 ],
-    "desc" : ["todo"
+    "desc" : ["Part of the ReactJS wave of my other personal projects. This wbsite was also built using ReactJs, which I find to be very helpful to stand up feature-rich and interactive website layouts. The mina goal for this website was to explain the LANDWAR tabletop wargame to players, direct those players to helpful resources, and provide any pertinent news about the game."
     ],
     "mediaData" : [["some","rows"], ["some","rows"]]
 },
@@ -157,18 +164,17 @@ const ProjectDataCode = { "data" : [
 {
     "title" : "Personal Website 2015",
     "subtitle": "",
-    "url" : "todo",
-    "thumb" : "todo",
-    "date" : "todo",
+    "thumb" : "/img/projectsCode/roohrsite1Thumb.png",
+    "date" : "AUG 2015",
     "team" : [
         {"name": "Peter Roohr"}
     ],
     "tech" : [
     ],
-    "features": ["todo",
-                    "todo"
+    "features": ["Simple static website.",
+                    "Quick stand-up."
                 ],
-    "desc" : [],
+    "desc" : ["The original website I put up in 2015, built pretty much out of Bootstrap and jQuery. The website pretty basic, as I had just decided to take up Bootstrap a few months before hand. The website served ably enough for 5 years before being upgraded with React and a total rebuild in 2019. There were whole sections of the old website I never compeleted due to structural issues - issues mostly caused by being a very simple setup."],
     "mediaData" : [["some","rows"], ["some","rows"]]
 },
 
@@ -176,17 +182,24 @@ const ProjectDataCode = { "data" : [
     "title" : "App - Alpha Striker",
     "subtitle": "",
     "url" : "todo",
-    "thumb" : "todo",
-    "date" : "todo",
+    "thumb" : "/img/projectsCode/strikerAlphaThumb.png",
+    "date" : "OCT 2015",
     "team" : [
         {"name": "Peter Roohr"}
     ],
     "tech" : [
+        {"name":"AngularJS", "url":""}
     ],
-    "features": ["todo",
-                    "todo"
-                ],
-    "desc" : ["todo"
+    "features": ["Game aide for Battletech:Alpha Strike.",
+                    "Increases speed-of-play by automating calculations",
+                    "Enhances gameplay by providing in-time game data for players."
+    ],
+    "desc" : ["This is not an official product of, for, or by Catalyst Game Labs; nor an officially licensed Battletech product.",
+                "Coverage out of the way, here's a good printout:",
+                "Battletech:Alpha Strike is a tabletop, miniatures, wargame based on the Battletech franchise. Players command all sorts of armored fighting vehicles and walking warmachines. During the game, one of the actions a Unit can take is a Ranged Attack in which players roll 6-sided dice to see if they've successfully hit their target. Battletech:Alpha Strike has a fairly complicated means of determining the odds of those dice; modifiers like range, intervening terrain, the movement of target and attacker, all have an affect.",
+                "Although this is a detailed way of determining hits, it can be extremely taxing to the average player, so much so that I made this calculator. Basically the calculator turns the big list of modifiers into UI buttons and checkboxes, removing the need to actually calculate anything. Players simply input the conditions of the attack to be made, and the system prints out the number that the player needs to roll. It also colors this number based on odds, a lower probabilty of success will be red and vice versa.",
+                "I never got the entire app completed, but I got the basic version of it functioning well enough, and even optimized the layout for mobile."
+
     ],
     "mediaData" : [["some","rows"], ["some","rows"]]
 },

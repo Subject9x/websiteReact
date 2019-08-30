@@ -45,7 +45,7 @@ class GaragePage extends Component{
                     <Card>
                         <CardBody>
                             <CardTitle ><b>[In Progress]</b></CardTitle>
-                            <CardText>These projects are actively being worked on as of 2019.</CardText>
+                            <CardText>These projects are actively being worked on.</CardText>
                         </CardBody>
                     </Card>
                 </Col>

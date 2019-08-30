@@ -16,14 +16,14 @@ Overview:
 class NavHeader extends Component{
     render(){
         return(
-            <Row>
-                <Col md={{ size: 2}}><Link to="/"><Button>Home</Button></Link></Col>
-                <Col md={{ size: 2}}><Link to="/garage"><Button>Code Garage</Button></Link></Col>
-                <Col md={{ size: 2}}><Link to="/artwork"><Button>Artwork</Button></Link></Col>
-                <Col md={{ size: 2}}><Link to="/boardgames"><Button>Board Games</Button></Link></Col>
-                <Col md={{ size: 2}}><Link to="/network"><Button>Network</Button></Link></Col>
-                <Col md={{ size: 2}}><Link to="/about"><Button>About</Button></Link></Col>
-            </Row>
+        <Row>
+            <Col md={{ size: 2}}><Link to="/"><Button>Home</Button></Link></Col>
+            <Col md={{ size: 2}}><Link to="/garage"><Button>Code Garage</Button></Link></Col>
+            <Col md={{ size: 2}}><Link to="/artwork/home"><Button>Artwork</Button></Link></Col>
+            <Col md={{ size: 2}}><Link to="/boardgames"><Button>Board Games</Button></Link></Col>
+            <Col md={{ size: 2}}><Link to="/network"><Button>Network</Button></Link></Col>
+            <Col md={{ size: 2}}><Link to="/about"><Button>About</Button></Link></Col>
+        </Row>
         );
     }
 }

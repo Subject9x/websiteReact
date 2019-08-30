@@ -31,9 +31,9 @@ class CommonImagePanel extends Component{
       <div>
         <img className="img-thumbnail rounded" src={this.props.src} alt="none" onClick={this.toggle}/>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <div class="container-fluid">
-            <div class="row justify-content-md-center">
-              <div class="col-md-auto">
+          <div className="container-fluid">
+            <div className="row justify-content-md-center">
+              <div className="col-md-auto">
                 <img  src={this.props.src} alt="none" onClick={this.toggle}/>
               </div>
             </div>
