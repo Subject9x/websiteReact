@@ -5,6 +5,7 @@ import { withRouter } from 'react-router';
 
 import CommonImagePanel from '../common/CommonImagePanel'
 import ProjectDataCode from '../../data/projects/ProjectDataCode.js';
+import ProjectDataBoardGames from '../../data/projects/ProjectDataBoardGames.js';
 
 /*
 WebsiteReact
@@ -23,7 +24,14 @@ Overview:
 
 class CodeProjectPage extends Component {
     render() {
-        const theData = ProjectDataCode.data[this.props.match.params.id];
+        let theData;
+        if(this.props.match.path === '/garage/project/:id'){
+            theData = ProjectDataCode.data[this.props.match.params.id];
+        }
+        else{
+            theData = ProjectDataBoardGames.data[this.props.match.params.id];
+        }
+        
         if( theData === undefined){
             /* quick safety valve for null project data */
             return(
@@ -63,6 +71,13 @@ Project header
     icon, title, release date, url
 */
 const CodeProjectPanelHeader = (props) =>{
+    let href;
+    if(props.url === undefined){
+        href = <div></div>
+    }
+    else{
+        href = <Col md={{size:4, offset:1}}><a href={props.url}  target="_"><h3>main website</h3></a></Col>;
+    }
     return(
     <Container>
         <Row>
@@ -72,7 +87,7 @@ const CodeProjectPanelHeader = (props) =>{
         &nbsp;
         <Row>
             <Col md={{size:6, offset:1}}><h4><b>Release Date:</b></h4>{props.date}</Col>
-            {(props)=>{if(props.url !== undefined){return(<Col md={{size:4, offset:1}}><a href={props.url}  target="_"><h3>main website</h3></a></Col>);}}}
+            {href}
         </Row>
     </Container>
     );

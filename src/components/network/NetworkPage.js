@@ -35,10 +35,10 @@ class NetworkPage extends Component{
             &nbsp;
             <Row>
                 <Col md={{size:2, offset:1}}><h4><a href="https://subjecttotesting.blogspot.com/2018/05/the-cold-rise-from-sleep.html" target="_">battleMETAL Dev Blog</a></h4></Col>
-                <Col md={{size:2}}><h4><a href="" target="_">LANDWAR</a></h4></Col>
+                <Col md={{size:2}}><h4><a href="" target="_">TODO-LANDWAR</a></h4></Col>
                 <Col md={{size:2}}><h4><a href="https://github.com/Subject9x/LANDWAR_unitBuilder" target="_">LANDWAR Unit Calculator source</a></h4></Col>
                 <Col md={{size:2}}><h4><a href="https://github.com/EamonnMR/Zond" target="_">Zond I Source Code</a></h4></Col>
-                <Col md={{size:2}}><h4><a href="" target="_"></a></h4></Col>
+                <Col md={{size:2}}><h4><a href="" target="_"></a>TODO</h4></Col>
             </Row>
         </Container>
         );

@@ -13,7 +13,7 @@ Overview:
 //oh, nifty
 const GameProjectSpot = (props) =>{
     return(
-    <Link to={'/garage/project/'+props.projectLinkId} params={props.projectLinkId} >
+    <Link to={'/garage/project/'+props.projectLinkId} params={props.projectLinkId} source='code'>
         <Media>
             <Media left>
                 <Media object data-source={props.imagePath} src={props.imagePath} alt="placeholder"/>
