@@ -42,7 +42,9 @@ const ProjectDataCode = { "data" : [
                 "I created a dev blog series over on Blogger that has summarized many of the design choices I made and why. You can find the blog link above, same with the link to the github project. I developed the main game code from Aug 2016 to about Aug 2019, 3 years of development. In that time, I radically altered the features and functionality of the vanilla game of Quake.",
                 "A sub-goal of the game project was to also provide a few new API's for Quake C; the game-code that is used by Quake for modifications, to allow modders to make their own mech-style games painlessly. I've created helpful documents and a design bible that can be found on the github wiki of the project."
     ],
-    "mediaData" : [["some","rows"], ["some","rows"]]
+    "mediaData" : [["/img/projectsCode/battlemetal/battlemetal_1.png","/img/projectsCode/battlemetal/battlemetal_2.jpg"],
+         ["/img/projectsCode/battlemetal/battlemetal_3.jpg","/img/projectsCode/battlemetal/battlemetal_4.jpg"]
+    ]
 },
 
 {
@@ -268,7 +270,7 @@ const ProjectDataCode = { "data" : [
                 "Shooting was handled like any decent 2D top down game, however I wanted the ability to do semi-destructible environments and hit-locations on the mechs themselves. Overall, this specific project proved to be a dead-end at the time, but I learned a bit more about making 2D games and game design overall. I would like to return to the concept someday.",
                 "I also attempted to port this to HTML5/Javascript with mixed success, although it ran nicely in a browser, the inability to do full mouse-grab was an impediment. Mouse grab allows the program to prevent the user's mouse from spilling over the edge of the game-window. For a reaction-focused game, this would have been crucial."
     ],
-    "mediaData" : [["TODO","TODO"], ["TODO","TODO"]]
+    "mediaData" : [["/img/projectsCode/mw2d/mw2d1.png","/img/projectsCode/mw2d/mw2d2.png"], ["/img/projectsCode/mw2d/mw2d3.png"]]
 },
 
 {
