@@ -133,18 +133,16 @@ const CodeProjectInfoPanelGroup = (props) =>{
     return(
     <Container>
         <Row>
-            <Col md={{size:4, offset:1}}>
+            <Col md={{size:4}}>
                 <CodeProjectInfoPanel title="Team" itemList={props.team} />
             </Col>
-            <Col md={{size:4, offset:2}}>
+            <Col md={{size:4}}>
                 <CodeProjectInfoPanel title="Tech" itemList={props.tech}/>
             </Col>
-        </Row>
-        <Row>
-            <Col md={{size:4, offset:1}}>
+            <Col md={{size:4}}>
                 <CodeProjectInfoPanel title="Links" itemList={props.links} />
             </Col>
-            <Col md={{size:4, offset:2}}>
+            <Col md={{size:4}}>
                 <CodeProjectInfoPanel title="Tooling" itemList={props.tooling}/>
             </Col>
         </Row>

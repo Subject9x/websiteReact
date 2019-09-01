@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Row, Col, Button } from 'reactstrap';
+import {Row, Col, Button, ButtonGroup} from 'reactstrap';
 import { Link } from 'react-router-dom';
 /*
 WebsiteReact
@@ -16,13 +16,17 @@ Overview:
 class NavHeader extends Component{
     render(){
         return(
-        <Row>
-            <Col md={{ size: 2}}><Link to="/"><Button>Home</Button></Link></Col>
-            <Col md={{ size: 2}}><Link to="/garage"><Button>Code Garage</Button></Link></Col>
-            <Col md={{ size: 2}}><Link to="/artwork/home"><Button>Artwork</Button></Link></Col>
-            <Col md={{ size: 2}}><Link to="/boardgames"><Button>Board Games</Button></Link></Col>
-            <Col md={{ size: 2}}><Link to="/network"><Button>Network</Button></Link></Col>
-            <Col md={{ size: 2}}><Link to="/about"><Button>About</Button></Link></Col>
+        <Row className="text-centered">
+            <Col md={{size:8, offset:3}}>
+                <ButtonGroup>
+                    <Link to="/"><Button>Home</Button></Link> 
+                    <Link to="/garage"><Button>Code Garage</Button></Link>
+                    <Link to="/artwork/home"><Button>Artwork</Button></Link>
+                    <Link to="/boardgames"><Button>Board Games</Button></Link>
+                    <Link to="/network"><Button>Network</Button></Link> 
+                    <Link to="/about"><Button>About</Button></Link>
+                </ButtonGroup>
+            </Col>
         </Row>
         );
     }

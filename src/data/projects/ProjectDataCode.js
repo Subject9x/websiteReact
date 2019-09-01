@@ -221,13 +221,13 @@ const ProjectDataCode = { "data" : [
 {
     "title" : "BattleRigs",
     "subtitle": "prototype",
-    "thumb" : "todo",
-    "date" : "N/A",
+    "thumb" : "/img/projectsCode/rigsThumb_gray.png",
+    "date" : "Prototype",
     "team" : [
         {"name": "Peter Roohr"}
     ],
     "tech" : [
-        {"name" : "BabylonJS", "url" : ""}
+        {"name" : "BabylonJS", "url" : "https://www.babylonjs.com/"}
     ],
     "tooling" :[
         {"name": "Milkshape", "url":"http://www.milkshape3d.com/"},
@@ -237,17 +237,17 @@ const ProjectDataCode = { "data" : [
                     "Tile-data generated level geometry."
                 ],
     "desc" : ["This was supposed to be a spiritual successor to an old DOS game that I adored from my youth; Assault Rigs, 1996 from Psygnosis. It was a maze-running game. The player would pick one of three different tank types, and then every level was maze / puzzle. The player was tasked with grabbing all the gems (yes, gemstones) in a map, and then locate the exit within a time limit.",
-                "For whatever reason, the game stuck with me. I enjoyed the aethetics - there were 4 different 'zones' (tron-style, steampunk, sci-fi, ww2), and the level building was fun to engage with.",
+                "For whatever reason, the game stuck with me. I enjoyed the aesthetics - there were 4 different 'zones' (tron-style, steampunk, sci-fi, ww2), and the level building was fun to engage with.",
                 "I tried to recreate this experience on my own with the BattleRigs project with mixed success. I thought at the time that HTML5 was a good future direction to move in for game creation."
     ],
-    "mediaData" : [["some","rows"], ["some","rows"]]
+    "mediaData" : [["/img/projectsCode/rigs/rigs1.png","/img/projectsCode/rigs/rigs2.png"], ["/img/projectsCode/rigs/rigs3.png"]]
 },
 
 {
     "title" : "Mechwar2D:Mercenaries",
     "subtitle": "prototype",
     "thumb" : "/img/projectsCode/bt2dThumb.png",
-    "date" : "N/A",
+    "date" : "Prototype",
     "team" : [
         {"name": "Peter Roohr"}
     ],
