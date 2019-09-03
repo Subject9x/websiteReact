@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Label, Row, Col } from 'reactstrap';
+import { Container, Card, CardBody, CardText, Row, Col } from 'reactstrap';
 
 import NavHeader from '../NavHeader';
 
@@ -12,7 +12,20 @@ Overview:
     TODO - 
 */
 
-class NetworkPage extends Component{
+const NetworkPageLinkCard = (props) =>{
+    return(
+        <Col>
+            <Card>
+                <CardBody>
+                    <CardText ><h4><a href={props.ref} target="_">{props.title}</a></h4></CardText> 
+                </CardBody>
+            </Card>
+        </Col>
+    );
+}
+
+
+export default class NetworkPage extends Component{
     render(){
         return(
         <Container >
@@ -27,7 +40,8 @@ class NetworkPage extends Component{
             &nbsp;
             <Row>
                 <Col md={{size:2, offset:1}}><h4><a href="https://github.com/Subject9x" target="_">My github</a></h4></Col>
-                <Col md={{size:2}}><h4><a href="" target="_">Eamonn McHugh-Roohr</a></h4></Col>
+                <NetworkPageLinkCard ref="https://github.com/Subject9x" title="My github" />
+                <Col md={{size:2}}><h4><a href="http://eamonnmr.com/" target="_">Eamonn McHugh-Roohr</a></h4></Col>
                 <Col md={{size:2}}><h4><a href="http://battleMETAL.net" target="_">battleMETAL</a></h4></Col>
                 <Col md={{size:2}}><h4><a href="https://github.com/Subject9x/battleMETAL" target="_">battleMETAL Source Code</a></h4></Col>
                 <Col md={{size:2}}><h4><a href="https://github.com/Subject9x/battleMETAL_website" target="_">battleMETAL-Website</a></h4></Col>
@@ -44,5 +58,3 @@ class NetworkPage extends Component{
         );
     }
 }
-
-export default NetworkPage;
