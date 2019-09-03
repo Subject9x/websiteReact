@@ -16,7 +16,7 @@ const GameProjectPoster = (props) =>{
     <Link to={'/garage/project/'+props.projectLinkId} params={props.projectLinkId} source='code'>
     <Container className={props.clazz + " h-100"}>
         <Row>
-            <Col sm={{size:6, offset:3}}><img className="img-fluid h-100" src={props.imagePath} alt="placeholder" /></Col>
+            <Col sm={{size:6, offset:3}}><img className="img-fluid" src={props.imagePath} alt="placeholder" /></Col>
         </Row>
         <Row>
             <Col sm={{size:10, offset:1}}><b><h3>{props.projectName}</h3></b></Col>
@@ -29,7 +29,7 @@ const GameProjectPoster = (props) =>{
 class GaragePage extends Component{
     render(){
         return(
-        <Container >
+        <Container>
             <NavHeader/>
             &nbsp;
             <Row>

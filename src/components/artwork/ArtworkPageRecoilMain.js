@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col} from 'reactstrap';
+import { Container, Row, Col, Button} from 'reactstrap';
 
 import NavHeader from '../NavHeader';
 import CommonImagePanel from '../common/CommonImagePanel';
@@ -34,9 +34,15 @@ class ArtworkPageRecoilMain extends Component{
         </Row>
         &nbsp;
         <Row>
-          <Col md={{Size:2, offset:1}}>The Armors</Col>
-          <Col md={{size:2, offset:1}}>Characters</Col>
-          <Col md={{size:2}}>AFV's</Col>
+          <Col md={{size:10, offset:2}}>
+          <Container>
+            <Row>
+              <Col md={{Size:4}}><Button>The Armors</Button></Col>
+              <Col md={{size:4}}><Button>Characters</Button></Col>
+              <Col md={{size:4}}><Button>Armored Vehicles</Button></Col>
+            </Row>
+          </Container>
+          </Col>
         </Row>
       </Container>
     );
