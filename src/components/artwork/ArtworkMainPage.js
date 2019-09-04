@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Media} from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 import NavHeader from '../NavHeader';
-import { Link } from 'react-router-dom';
+import CommonProjectPanel from '../common/CommonProjectPanel';
+
 /*
 WebsiteReact
 Peter Roohr
@@ -32,13 +34,21 @@ class ArtworkMainPage extends Component{
             </Row>
             &nbsp;
             <Row>
-                <Col md={{size:4, offset:2}}><ArtProjectPoster clazz="btn btn-info" link="/artwork/recoil" section="Recoil" /></Col>
-                <Col md={{size:4}}><ArtProjectPoster link="/artwork/concepts" section="Concept Art" /></Col>
+                <Col md={{size:4, offset:2}}>
+                    <CommonProjectPanel clazz="btn btn-info" linkPath="/artwork/recoil" linkVar="0" projectName="Recoil" imagePath="placeholder" />
+                </Col>
+                <Col md={{size:4}}>
+                    <CommonProjectPanel clazz="btn btn-info" linkPath="/artwork/concepts" linkVar="1" projectName="Concept Art" imagePath="placeholder"/>
+                </Col>
             </Row>
             &nbsp;
             <Row>
-                <Col md={{size:4, offset:2}}><ArtProjectPoster link="/artwork/3d" section="3D Work" /></Col>
-                <Col md={{size:4}}><ArtProjectPoster link="/artwork/minis" section="Miniatures" /></Col>
+                <Col md={{size:4, offset:2}}>
+                    <CommonProjectPanel clazz="btn btn-info" linkPath="/artwork/3d" linkVar="2" projectName="3D Work" imagePath="placeholder"/>
+                </Col>
+                <Col md={{size:4}}>
+                    <CommonProjectPanel clazz="btn btn-info" linkPath="/artwork/minis" linkVar="3" projectName="Miniatures" imagePath="placeholder"/>
+                </Col>
             </Row>
         </Container>
         );
@@ -46,40 +56,3 @@ class ArtworkMainPage extends Component{
 }
 
 export default ArtworkMainPage;
-
-const ArtProjectPoster = (props) =>{
-    return(  
-    <Link to={props.link} source='code'>
-    <Container className={props.clazz + " h-100"}>
-        <Row>
-            <Col sm={{size:6, offset:3}}><img className="img-fluid h-100" src={props.imagePath} alt="placeholder" /></Col>
-        </Row>
-        <Row>
-            <Col sm={{size:10, offset:1}}><b><h3>{props.section}</h3></b></Col>
-        </Row>
-    </Container>
-    </Link>
-    );
-}
-
-const ArtworkMainPageSectionBadge = (props) =>{
-    return(
-    <Container>
-        <Link to={props.link}>
-        <Row>
-            <Col md={{size:3}}>
-                <img src={props.imagePath} alt="none"></img>
-            </Col>
-            <Col md={{size:9}}>
-                <Media>
-                    <Media body>
-                        <Media heading >{props.section}</Media>
-                        {props.desc}
-                    </Media>
-                </Media>
-            </Col>
-        </Row>
-        </Link>
-    </Container>
-    ); 
-}
