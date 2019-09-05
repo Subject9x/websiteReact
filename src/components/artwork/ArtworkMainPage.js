@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Media} from 'reactstrap';
-import { Link } from 'react-router-dom';
+import { Container, Row, Col } from 'reactstrap';
 
 import NavHeader from '../NavHeader';
 import CommonProjectPanel from '../common/CommonProjectPanel';
@@ -29,25 +28,26 @@ class ArtworkMainPage extends Component{
                 <Col md={{size:6}}>
                     <p>
                     This section details the many art projects I've undertaken across a wide selection of mediums; from concept art, 3D modeling, to painting
-                    miniatures for tabletop wargaming.</p>
+                    miniatures for tabletop wargaming. Majority of my artwork is in a hobby capacity, or with the case of Concetp art; in-service to another
+                    project that I am working on.</p>
                 </Col>
             </Row>
             &nbsp;
             <Row>
                 <Col md={{size:4, offset:2}}>
-                    <CommonProjectPanel clazz="btn btn-info" linkPath="/artwork/recoil" linkVar="0" projectName="Recoil" imagePath="placeholder" />
+                    <CommonProjectPanel clazz="btn btn-info" linkPath="/artwork/recoil" linkVar="" projectName="Recoil" imagePath="placeholder" />
                 </Col>
                 <Col md={{size:4}}>
-                    <CommonProjectPanel clazz="btn btn-info" linkPath="/artwork/concepts" linkVar="1" projectName="Concept Art" imagePath="placeholder"/>
+                    <CommonProjectPanel clazz="btn btn-info" linkPath="/artwork/concepts" linkVar="" projectName="Concept Art" imagePath="placeholder"/>
                 </Col>
             </Row>
             &nbsp;
             <Row>
                 <Col md={{size:4, offset:2}}>
-                    <CommonProjectPanel clazz="btn btn-info" linkPath="/artwork/3d" linkVar="2" projectName="3D Work" imagePath="placeholder"/>
+                    <CommonProjectPanel clazz="btn btn-info" linkPath="/artwork/3d" linkVar="" projectName="3D Work" imagePath="placeholder"/>
                 </Col>
                 <Col md={{size:4}}>
-                    <CommonProjectPanel clazz="btn btn-info" linkPath="/artwork/minis" linkVar="3" projectName="Miniatures" imagePath="placeholder"/>
+                    <CommonProjectPanel clazz="btn btn-info" linkPath="/artwork/minis" linkVar="" projectName="Miniatures" imagePath="placeholder"/>
                 </Col>
             </Row>
         </Container>

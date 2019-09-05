@@ -19,13 +19,13 @@ Overview:
 class CommonProjectPanel extends Component{
   render(){
     return( 
-    <Link to={(props.linkPath + props.linkVar)} params={props.linkVar} source='code'>
-    <Container className={props.clazz + " h-100"}>
+    <Link to={this.props.linkPath + this.props.linkVar} params={this.props.linkVar} source='code'>
+    <Container className={this.props.clazz + " h-100"}>
         <Row>
-            <Col sm={{size:6, offset:3}}><img className="img-fluid" src={props.imagePath} alt="placeholder" /></Col>
+            <Col sm={{size:6, offset:3}}><img className="img-fluid" src={this.props.imagePath} alt="placeholder" /></Col>
         </Row>
         <Row>
-            <Col sm={{size:10, offset:1}}><b><h3>{props.projectName}</h3></b></Col>
+            <Col sm={{size:10, offset:1}}><b><h3>{this.props.projectName}</h3></b></Col>
         </Row>
     </Container>
     </Link>

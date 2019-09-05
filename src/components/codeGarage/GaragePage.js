@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import { Container, Row, Col, Card, CardBody, CardTitle, CardText, Media} from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 import NavHeader from '../NavHeader'
 
 /*
@@ -35,7 +35,11 @@ class GaragePage extends Component{
             <Row>
                 <Col md={{size:4}}><img className="img-fluid rounded" src='/img/thumbs/codeThumb.png' alt=''></img></Col>
                 <Col md={{size:6}}>
-                    <p>Here you will find all the freelance and hobby projects I've worked on so far.</p>
+                    <p>Here you will find all the freelance and hobby projects I've worked on so far. My main focus for this coding work is on video game
+                        design and programming. However, I also engage in web and UI design as well, I enjoy making smooth functioning UIX designs. For code 
+                        style, I emphasize maintainable, configurable, and generic code wherever possible. The game project <i>battleMETAL</i> is a great
+                        example of this with multiple systems added to the Quake engine that can be extended easily.
+                    </p>
                 </Col>
             </Row>
             &nbsp;

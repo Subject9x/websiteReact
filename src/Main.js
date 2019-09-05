@@ -9,8 +9,6 @@ import BoardGamesMainPage from './components/boardgames/BoardGamesMainPage';
 import NetworkPage from './components/network/NetworkPage';
 import AboutPage from './components/AboutPage';
 import CodeProjectPage from './components/codeGarage/CodeProjectPage';
-import ArtworkMainPage from './components/artwork/ArtworkMainPage';
-import ArtworkPageRecoilMain from './components/artwork/ArtworkPageRecoilMain';
 
 /*
 WebsiteReact
