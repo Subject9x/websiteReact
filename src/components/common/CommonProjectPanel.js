@@ -19,7 +19,7 @@ Overview:
 class CommonProjectPanel extends Component{
   render(){
     return( 
-    <Link to={this.props.linkPath + this.props.linkVar} params={this.props.linkVar} source='code'>
+    <Link to={this.props.linkPath + this.props.linkVar} params={this.props.linkVar}>
     <Container className={this.props.clazz + " h-100"}>
         <Row>
             <Col sm={{size:6, offset:3}}><img className="img-fluid" src={this.props.imagePath} alt="placeholder" /></Col>

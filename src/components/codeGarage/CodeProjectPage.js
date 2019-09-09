@@ -80,9 +80,9 @@ const CodeProjectPanelHeader = (props) =>{
     }
     return(
     <Container>
-        <Row>
-            <Col md={{size:1, offset:1}}><img src={props.thumb} alt="an icon"/></Col>
-            <Col md={{size:6}}><h2>{props.title}</h2></Col>
+        <Row centered>
+            <Col md={{size:1, offset:3}}><img src={props.thumb} alt="an icon"/></Col>
+            <Col md={{size:8}}><h2>{props.title}</h2></Col>
         </Row>
         &nbsp;
         <Row>

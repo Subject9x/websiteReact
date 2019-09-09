@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import {Container, Label, Row, Col, Media} from 'reactstrap';
-import {Link} from 'react-router-dom';
+import {Container, Row, Col} from 'reactstrap';
 
 import NavHeader from '../NavHeader';
 import CommonProjectPanel from '../common/CommonProjectPanel';
@@ -14,7 +13,6 @@ Overview:
             Free Lunch's PitFighter
             LANDWAR
             Alpha Kill Team Strike Conversion
-    TODO - 
 */
 
 class BoardGamesMainPage extends Component{
@@ -38,13 +36,13 @@ class BoardGamesMainPage extends Component{
                     <CommonProjectPanel clazz="btn btn-primary codePanel" linkPath="/boardgames/project/" linkVar="0" projectName="Battle Suit" imagePath="placeholder" />
                 </Col>
                 <Col md={{size:4}} color="info">
-                    <CommonProjectPanel clazz="btn btn-primary codePanel" linkPath="/boardgames/project/" linkVar="1" projectName="LANDWAR" imagePath="placeholder" />
+                    <CommonProjectPanel clazz="btn btn-primary codePanel" linkPath="/boardgames/project/" linkVar="3" projectName="LANDWAR" imagePath="placeholder" />
                 </Col>
                 <Col md={{size:4}} color="info">
-                    <CommonProjectPanel clazz="btn btn-primary codePanel" linkPath="/boardgames/project/" linkVar="2" projectName="PitFighter" imagePath="placeholder" />
+                    <CommonProjectPanel clazz="btn btn-success" linkPath="/boardgames/project/" linkVar="1" projectName="PitFighter" imagePath="placeholder" />
                 </Col>
                 <Col md={{size:4}} color="info">
-                    <CommonProjectPanel clazz="btn btn-primary codePanel" linkPath="/boardgames/project/" linkVar="3" projectName="40k Kill Team Conversion" imagePath="placeholder" />
+                    <CommonProjectPanel clazz="btn btn-success" linkPath="/boardgames/project/" linkVar="2" projectName="40k Kill Team Conversion" imagePath="placeholder" />
                 </Col>
             </Row>
         </Container>

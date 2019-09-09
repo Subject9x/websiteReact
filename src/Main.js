@@ -25,12 +25,12 @@ const Routing= (props) =>{
         <Switch>
             <Route path="/" exact component={HomePage}/>
             <Route path="/garage" exact component={GaragePage}/>
+            <Route path="/garage/project/:id" exact source='code' render={props => {return <CodeProjectPage {...props}/>;}}/>
             <Route path="/artwork/:page" exact render={props => {return <ArtworkNav {...props}/>;}} />
             <Route path="/boardgames" exact component={BoardGamesMainPage}/>
             <Route path="/boardgames/project/:id" exact render={props => {return <CodeProjectPage {...props}/>;}}/>
             <Route path="/network" exact component={NetworkPage}/>
             <Route path="/about" exact component={AboutPage}/>
-            <Route path="/garage/project/:id" exact source='code' render={props => {return <CodeProjectPage {...props}/>;}}/>
         </Switch>
     </Router>
     );

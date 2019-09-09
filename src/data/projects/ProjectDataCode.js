@@ -170,7 +170,7 @@ const ProjectDataCode = { "data" : [
     "title" : "Personal Website 2015",
     "subtitle": "",
     "thumb" : "/img/projectsCode/roohrsite1Thumb.png",
-    "date" : "AUG 2015",
+    "date" : "August 2015",
     "team" : [
         {"name": "Peter Roohr"}
     ],
@@ -192,7 +192,7 @@ const ProjectDataCode = { "data" : [
     "subtitle": "",
     "url" : "todo",
     "thumb" : "/img/projectsCode/strikerAlphaThumb.png",
-    "date" : "AUG 2015",
+    "date" : "August 2015",
     "team" : [
         {"name": "Peter Roohr"}
     ],
@@ -277,7 +277,7 @@ const ProjectDataCode = { "data" : [
     "title" : "Personal Website 2019",
     "subtitle": "An old website reforged",
     "thumb" : "todo",
-    "date" : "SEP 2019",
+    "date" : "September 2019",
     "team" : [
         {"name": "Peter Roohr"}
     ],
