@@ -58,7 +58,7 @@ const ProjectDataBoardGames = { "data" : [
     "title" : "Mecha Kill-Team",
     "subtitle": "",
     "thumb" : "TODO",
-    "date" : "TODO",
+    "date" : "December 2019",
     "team" : [
         {"name": "Peter Roohr"}
     ],
@@ -67,11 +67,12 @@ const ProjectDataBoardGames = { "data" : [
     ],
     "features": ["Framework for RPG-style campaigns.",
                   "Based on Warhammer40k:Kill Team.",
-                  "Players can unlock new equipment and abilities."
+                  "Players can unlock new equipment and abilities.",
+                  "Easy-to-play Combat RPG experience."
                 ],
     "desc" : [ "This is an UNOFFICIAL modification of the Warhammer40k:Kill Team rules set. The design goals were to expand the RPG potential of the rules, as well as shift the setting from infantry squads to fire teams of giant fighting robots. The original setup of Kill-Team is a Player-vs-Player scenario where each player builds a list of units to fight with (their Kill Team), I took this and changed it around to something more like an RPG.",
                 "One player becomes the Game Master (GM) in charge of commanding the non-player forces, running the campaign, and generally managing the entire series of game sessions. The other players each take control of a single Model, they are pilots of the giant robots or tanks.",
-                "Players also select which specialties their pilots feature, things like snipers, or brawlers. These choices unlock special abilities and select types of units the Players can pilot."
+                "Players also select which specialties their pilots feature, things like snipers, or brawlers. These choices unlock special abilities and select types of units the Players can pilot. I also wrote a conversion algorithm to port the stats of Battletech:Alpha Strike unit stats over to Kill-Team with varying levels of success."
     ],
     "mediaData" : [["some","rows"], ["some","rows"]]
   },

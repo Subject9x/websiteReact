@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Container, Label} from 'reactstrap';
-import NavHeader from './NavHeader';
 
+import NavHeader from './NavHeader';
+import CommonHeaderSpanner from './common/CommonHeaderSpanner';
 /*
 WebsiteReact
 Peter Roohr
@@ -15,6 +16,7 @@ class AboutPage extends Component{
         return(
             <Container >
                 <NavHeader />
+                <CommonHeaderSpanner />
                 <Label>You've reached the About page.</Label>
             </Container>
         );

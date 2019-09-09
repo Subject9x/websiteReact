@@ -7,6 +7,7 @@ import ArtworkConceptsDropMecha from './concepts/ArtworkConceptsDropMecha';
 import ArtworkConceptsDropCharacters from './concepts/ArtworkConceptsDropCharacters';
 import CommonDropSection from '../common/CommonDropSection';
 import CommonImagePanel from '../common/CommonImagePanel';
+import CommonHeaderSpanner from '../common/CommonHeaderSpanner';
 
 /*
 WebsiteReact
@@ -32,6 +33,7 @@ class ArtworkPageConceptsMain extends Component{
     return(
       <Container>
         <NavHeader />
+        <CommonHeaderSpanner />
         &nbsp;
         <Row>
           <Col md={{size:10, offset:1}}>Banner Image</Col>

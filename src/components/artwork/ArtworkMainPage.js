@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 
 import NavHeader from '../NavHeader';
 import CommonProjectPanel from '../common/CommonProjectPanel';
+import CommonHeaderSpanner from '../common/CommonHeaderSpanner';
 
 /*
 WebsiteReact
@@ -22,7 +23,7 @@ class ArtworkMainPage extends Component{
         return(
         <Container >
             <NavHeader />
-            &nbsp;
+            <CommonHeaderSpanner />
             <Row>
                 <Col md={{size:4}}><img className="img-fluid rounded" src='/img/thumbs/artThumb.png' alt=''></img></Col>
                 <Col md={{size:6}}>

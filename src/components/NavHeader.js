@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Row, Col, Button, ButtonGroup} from 'reactstrap';
+import {Row, Container, Col, Button, Nav, Navbar, NavbarBrand, NavItem, NavLink} from 'reactstrap';
 import { Link } from 'react-router-dom';
 /*
 WebsiteReact
@@ -14,20 +14,47 @@ Overview:
 */
 
 class NavHeader extends Component{
+    constructor(props) {
+        super(props);
+        this.toggle = this.toggle.bind(this);
+        this.state = {
+          isOpen: false
+        };
+    }
+    toggle() {
+        this.setState({
+            isOpen: !this.state.isOpen
+        });
+    }
+
     render(){
         return(
-        <Row className="text-centered">
-            <Col md={{size:8, offset:3}}>
-                <ButtonGroup>
-                    <Link to="/"><Button>Home</Button></Link> 
-                    <Link to="/garage"><Button>Code Garage</Button></Link>
-                    <Link to="/artwork/home"><Button>Artwork</Button></Link>
-                    <Link to="/boardgames"><Button>Board Games</Button></Link>
-                    <Link to="/network"><Button>Network</Button></Link> 
-                    <Link to="/about"><Button>About</Button></Link>
-                </ButtonGroup>
-            </Col>
-        </Row>
+        <Row>
+        <Col md={{size:12}}>
+            <Container id='fixed-top' fixed='top' className="container-fluid">
+                <Navbar color="secondary" light fixed='top' expand="md">
+                    <NavbarBrand href="/">Roohr Orbital Yards</NavbarBrand>
+                    <Nav className="ml-auto" navbar>
+                        <NavItem>
+                            <Link to="/garage"><Button>Code Garage</Button></Link>
+                        </NavItem>
+                        <NavItem>
+                            <Link to="/artwork/home"><Button>Artwork</Button></Link>
+                        </NavItem>
+                        <NavItem>
+                            <Link to="/boardgames"><Button>Board Games</Button></Link> 
+                        </NavItem>
+                        <NavItem>
+                            <Link to="/network"><Button>Network</Button></Link>
+                        </NavItem>
+                        <NavItem>
+                            <Link to="/about"><Button>About</Button></Link> 
+                        </NavItem>
+                    </Nav>
+                </Navbar>
+            </Container>
+         </Col>
+         </Row>
         );
     }
 }

@@ -3,7 +3,8 @@ import { Container, Row, Col, ListGroup, ListGroupItem } from 'reactstrap';
 import NavHeader from '../NavHeader';
 import { withRouter } from 'react-router';
 
-import CommonImagePanel from '../common/CommonImagePanel'
+import CommonImagePanel from '../common/CommonImagePanel';
+import CommonHeaderSpanner from '../common/CommonHeaderSpanner';
 import ProjectDataCode from '../../data/projects/ProjectDataCode.js';
 import ProjectDataBoardGames from '../../data/projects/ProjectDataBoardGames.js';
 
@@ -46,6 +47,7 @@ class CodeProjectPage extends Component {
         return (
         <Container>
             <NavHeader />
+            <CommonHeaderSpanner />
             &nbsp;
             <CodeProjectPanelHeader thumb={theData.thumb} title={theData.title} date={theData.date} url={theData.url}/>
             &nbsp;
@@ -86,7 +88,7 @@ const CodeProjectPanelHeader = (props) =>{
         </Row>
         &nbsp;
         <Row>
-            <Col md={{size:6, offset:1}}><h4><b>Release Date:</b></h4>{props.date}</Col>
+            <Col md={{size:4, offset:2}}><h4><b>Release Date:</b></h4>{props.date}</Col>
             {href}
         </Row>
     </Container>
@@ -109,6 +111,7 @@ const CodeProjectPanelInfoListItem = (props) =>{
 const CodeProjectInfoPanel = (props) =>{
     if(props.itemList !== undefined){
         return(
+        <Col md={{size:4, offset:1}}>
         <Container>
             <Row><Col sm={{size:10}}><h3>{props.title}</h3></Col></Row>
             <Row>
@@ -119,9 +122,9 @@ const CodeProjectInfoPanel = (props) =>{
                         })}
                     </ListGroup>
                 </Col>
-    
             </Row>
         </Container>
+        </Col>
         );
     }
     else{
@@ -132,19 +135,11 @@ const CodeProjectInfoPanel = (props) =>{
 const CodeProjectInfoPanelGroup = (props) =>{
     return(
     <Container>
-        <Row>
-            <Col md={{size:4}}>
-                <CodeProjectInfoPanel title="Team" itemList={props.team} />
-            </Col>
-            <Col md={{size:4}}>
-                <CodeProjectInfoPanel title="Tech" itemList={props.tech}/>
-            </Col>
-            <Col md={{size:4}}>
-                <CodeProjectInfoPanel title="Links" itemList={props.links} />
-            </Col>
-            <Col md={{size:4}}>
-                <CodeProjectInfoPanel title="Tooling" itemList={props.tooling}/>
-            </Col>
+        <Row className="justify-content-md-center">
+            <CodeProjectInfoPanel title="Team" itemList={props.team} />
+            <CodeProjectInfoPanel title="Tech" itemList={props.tech}/>
+            <CodeProjectInfoPanel title="Links" itemList={props.links} />
+            <CodeProjectInfoPanel title="Tooling" itemList={props.tooling}/>
         </Row>
     </Container>
     );

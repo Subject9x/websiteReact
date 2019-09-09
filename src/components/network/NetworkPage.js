@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Card, CardBody, CardText, Row, Col } from 'reactstrap';
 
 import NavHeader from '../NavHeader';
+import CommonHeaderSpanner from '../common/CommonHeaderSpanner';
 
 /*
 WebsiteReact
@@ -9,27 +10,28 @@ Peter Roohr
 Overview:  
     The main page for the Network section.
         Network contains links to EMR, and existing Roohr Orbital project websites.
-    TODO - 
 */
 
 const NetworkPageLinkCard = (props) =>{
     return(
-        <Col>
-            <Card>
-                <CardBody>
-                    <CardText ><h4><a href={props.ref} target="_">{props.title}</a></h4></CardText> 
-                </CardBody>
-            </Card>
-        </Col>
+    <Col md={{size:3}} className="h-100">
+    <Card>
+        <CardBody>
+            <CardText className="justify-content-md-center">
+                <a href={props.link} target="_">{props.title}</a>
+            </CardText>
+        </CardBody>
+    </Card>
+    </Col>
     );
 }
-
 
 export default class NetworkPage extends Component{
     render(){
         return(
-        <Container >
+        <Container>
             <NavHeader/>
+            <CommonHeaderSpanner />
             &nbsp;
             <Row>
                 <Col md={{size:4}}><img className="img-fluid rounded" src='/img/thumbs/netThumb.png' alt=''></img></Col>
@@ -39,20 +41,15 @@ export default class NetworkPage extends Component{
             </Row>
             &nbsp;
             <Row>
-                <Col md={{size:2, offset:1}}><h4><a href="https://github.com/Subject9x" target="_">My github</a></h4></Col>
-                <NetworkPageLinkCard ref="https://github.com/Subject9x" title="My github" />
-                <Col md={{size:2}}><h4><a href="http://eamonnmr.com/" target="_">Eamonn McHugh-Roohr</a></h4></Col>
-                <Col md={{size:2}}><h4><a href="http://battleMETAL.net" target="_">battleMETAL</a></h4></Col>
-                <Col md={{size:2}}><h4><a href="https://github.com/Subject9x/battleMETAL" target="_">battleMETAL Source Code</a></h4></Col>
-                <Col md={{size:2}}><h4><a href="https://github.com/Subject9x/battleMETAL_website" target="_">battleMETAL-Website</a></h4></Col>
-            </Row>
-            &nbsp;
-            <Row>
-                <Col md={{size:2, offset:1}}><h4><a href="https://subjecttotesting.blogspot.com/2018/05/the-cold-rise-from-sleep.html" target="_">battleMETAL Dev Blog</a></h4></Col>
-                <Col md={{size:2}}><h4><a href="" target="_">TODO-LANDWAR</a></h4></Col>
-                <Col md={{size:2}}><h4><a href="https://github.com/Subject9x/LANDWAR_unitBuilder" target="_">LANDWAR Unit Calculator source</a></h4></Col>
-                <Col md={{size:2}}><h4><a href="https://github.com/EamonnMR/Zond" target="_">Zond I Source Code</a></h4></Col>
-                <Col md={{size:2}}><h4><a href="" target="_"></a>TODO</h4></Col>
+                <NetworkPageLinkCard link="https://github.com/Subject9x" title="My github" />
+                <NetworkPageLinkCard link="http://eamonnmr.com/" title="Eamonn McHugh-Roohr" />
+                <NetworkPageLinkCard link="http://battleMETAL.net" title="battleMETAL" />
+                <NetworkPageLinkCard link="https://github.com/Subject9x/battleMETAL" title="battleMETAL Source Code" />
+                <NetworkPageLinkCard link="https://github.com/Subject9x/battleMETAL_website" title="battleMETAL Website Source" />
+                <NetworkPageLinkCard link="https://subjecttotesting.blogspot.com/2018/05/the-cold-rise-from-sleep.html" title="battleMETAL Dev Blog" />
+                <NetworkPageLinkCard link="" title="TODO-LANDWAR" />
+                <NetworkPageLinkCard link="https://github.com/Subject9x/LANDWAR_unitBuilder" title="LANDWAR Unit Calculator source" />
+                <NetworkPageLinkCard link="https://github.com/EamonnMR/Zond" title="Zond I Source Code" />
             </Row>
         </Container>
         );

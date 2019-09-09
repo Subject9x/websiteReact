@@ -3,6 +3,7 @@ import { Container, Row, Col} from 'reactstrap';
 
 import NavHeader from '../NavHeader';
 import CommonImagePanel from '../common/CommonImagePanel';
+import CommonHeaderSpanner from '../common/CommonHeaderSpanner';
 
 /*
 WebsiteReact
@@ -18,6 +19,7 @@ class ArtworkPageModelsMain extends Component{
     return(
       <Container>
         <NavHeader />
+        <CommonHeaderSpanner />
         &nbsp;
         <Row>
           <Col md={{size:10, offset:1}}>Banner Image</Col>

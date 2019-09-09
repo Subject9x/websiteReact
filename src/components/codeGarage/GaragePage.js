@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 
 import NavHeader from '../NavHeader'
 import CommonProjectPanel from '../common/CommonProjectPanel';
+import CommonHeaderSpanner from '../common/CommonHeaderSpanner';
 /*
 WebsiteReact
 Peter Roohr
@@ -15,6 +16,7 @@ class GaragePage extends Component{
         return(
         <Container>
             <NavHeader/>
+            <CommonHeaderSpanner />
             &nbsp;
             <Row>
                 <Col md={{size:4}}><img className="img-fluid rounded" src='/img/thumbs/codeThumb.png' alt=''></img></Col>

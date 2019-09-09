@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Container, Col, Row } from "reactstrap";
 
 import NavHeader from '../NavHeader';
+import CommonHeaderSpanner from '../common/CommonHeaderSpanner';
 /*
 WebsiteReact
 Peter Roohr
@@ -20,6 +21,7 @@ class ArtworkPageMinisMain extends Component{
     return(
       <Container>
         <NavHeader />
+        <CommonHeaderSpanner />
         &nbsp;
         <Row>
           <Col md={{size:10, offset:1}}>Banner Image</Col>

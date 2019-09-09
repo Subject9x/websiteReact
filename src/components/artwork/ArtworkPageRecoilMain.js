@@ -3,6 +3,7 @@ import { Container, Row, Col, Button} from 'reactstrap';
 
 import NavHeader from '../NavHeader';
 import CommonImagePanel from '../common/CommonImagePanel';
+import CommonHeaderSpanner from '../common/CommonHeaderSpanner';
 
 /*
 WebsiteReact
@@ -17,7 +18,8 @@ class ArtworkPageRecoilMain extends Component{
     return(
       <Container>
         <NavHeader />
-        &nbsp;
+        <CommonHeaderSpanner />
+        <Row></Row>
         <Row>
           <Col md={{size:10, offset:1}} className="text-center">TODO - banner image</Col>
         </Row>

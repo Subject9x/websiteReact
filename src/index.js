@@ -5,6 +5,6 @@ import './index.css';
 import Main from './Main';
 
 ReactDOM.render(
-    <Main/>,
+    <Main className="pageBackground"/>,
     document.getElementById('root')
 );

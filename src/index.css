@@ -1,8 +1,21 @@
+html {
+    background-color: gray;
+}
+
+body{
+    background-color: gray;
+}
+
+/* used for project buttons on code garage and board games page*/
 .codePanel{
     background-color: #b35900;
     border-color: #804000;
 }
+.codePanel:hover{
+    background-color: #804000;
+    border-color: #804000;
+}
 
 .pageBackground{
-    background-color: #343535;
+    background-color: gray;
 }

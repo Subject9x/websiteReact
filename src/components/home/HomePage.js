@@ -11,7 +11,7 @@ Overview:
 class HomePage extends Component{
     render(){
         return(
-            <Container >
+            <Container className="pageBackground">
                 <Row>
                     <Col sm={{ size: 6, offset: 3 }}>
                         <h1>Roohr Orbital Yards</h1>
@@ -21,19 +21,19 @@ class HomePage extends Component{
                 <Row>
                     <Col sm={{ size: 6, offset: 3 }}>
                         Hello and welcome to the Orbital Yards, here you can explore all the projects and endeavors that I embark on. Each icon below will take you to a different sector of the 
-                        station, to read more about me specifically, just click <Button><Link to="/about">Here</Link></Button>
+                        station, to read more about me specifically, just click <Link to="/about">Here</Link>
                     </Col>
                 </Row>
                 &nbsp;
                 &nbsp;
                 <Row>
-                    <Col md={{ size: 3, offset:3 }}><HomePageButtonType link="/garage" alt="[Code Work]" src='/img/thumbs/codeThumb.png'/></Col>
-                    <Col md={{ size: 3}}><HomePageButtonType link="/artwork/home" alt="[Artwork]" src='/img/thumbs/artThumb.png'/></Col>
+                    <Col md={{ size: 4, offset:2 }}><HomePageButtonType link="/garage" alt="[Code Work]" src='/img/thumbs/codeThumb.png'/></Col>
+                    <Col md={{ size: 4}}><HomePageButtonType link="/artwork/home" alt="[Artwork]" src='/img/thumbs/artThumb.png'/></Col>
                 </Row>
                 &nbsp;
                 <Row>
-                    <Col md={{ size: 3, offset:3 }}><HomePageButtonType link="/boardgames" alt="[Board Games]" src='/img/thumbs/tableThumb.png'/></Col>
-                    <Col md={{ size: 3}}><HomePageButtonType link="/network" alt="[Other Sites]" src='/img/thumbs/netThumb.png'/></Col>
+                    <Col md={{ size: 4, offset:2 }}><HomePageButtonType link="/boardgames" alt="[Board Games]" src='/img/thumbs/tableThumb.png'/></Col>
+                    <Col md={{ size: 4}}><HomePageButtonType link="/network" alt="[Other Sites]" src='/img/thumbs/netThumb.png'/></Col>
                 </Row>
             </Container>
         );
