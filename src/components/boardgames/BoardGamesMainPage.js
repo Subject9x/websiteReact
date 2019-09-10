@@ -41,10 +41,10 @@ class BoardGamesMainPage extends Component{
                     <CommonProjectPanel clazz="btn btn-primary codePanel" linkPath="/boardgames/project/" linkVar="3" projectName="LANDWAR" imagePath="placeholder" />
                 </Col>
                 <Col md={{size:4}} color="info">
-                    <CommonProjectPanel clazz="btn btn-success" linkPath="/boardgames/project/" linkVar="1" projectName="PitFighter" imagePath="placeholder" />
+                    <CommonProjectPanel clazz="btn btn-success commonProjectPanelSucces" linkPath="/boardgames/project/" linkVar="1" projectName="PitFighter" imagePath="placeholder" />
                 </Col>
                 <Col md={{size:4}} color="info">
-                    <CommonProjectPanel clazz="btn btn-success" linkPath="/boardgames/project/" linkVar="2" projectName="40k Kill Team Conversion" imagePath="placeholder" />
+                    <CommonProjectPanel clazz="btn btn-success commonProjectPanelSucces" linkPath="/boardgames/project/" linkVar="2" projectName="40k Kill Team Conversion" imagePath="placeholder" />
                 </Col>
             </Row>
         </Container>

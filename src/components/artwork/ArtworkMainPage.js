@@ -36,19 +36,19 @@ class ArtworkMainPage extends Component{
             &nbsp;
             <Row>
                 <Col md={{size:4, offset:2}}>
-                    <CommonProjectPanel clazz="btn btn-info" linkPath="/artwork/recoil" linkVar="" projectName="Recoil" imagePath="placeholder" />
+                    <CommonProjectPanel clazz="btn btn-info artworkTitlePanel" linkPath="/artwork/recoil" linkVar="" projectName="Recoil" imagePath="placeholder" />
                 </Col>
                 <Col md={{size:4}}>
-                    <CommonProjectPanel clazz="btn btn-info" linkPath="/artwork/concepts" linkVar="" projectName="Concept Art" imagePath="placeholder"/>
+                    <CommonProjectPanel clazz="btn btn-info artworkTitlePanel" linkPath="/artwork/concepts" linkVar="" projectName="Concept Art" imagePath="placeholder"/>
                 </Col>
             </Row>
             &nbsp;
             <Row>
                 <Col md={{size:4, offset:2}}>
-                    <CommonProjectPanel clazz="btn btn-info" linkPath="/artwork/3d" linkVar="" projectName="3D Work" imagePath="placeholder"/>
+                    <CommonProjectPanel clazz="btn btn-info artworkTitlePanel" linkPath="/artwork/3d" linkVar="" projectName="3D Work" imagePath="placeholder"/>
                 </Col>
                 <Col md={{size:4}}>
-                    <CommonProjectPanel clazz="btn btn-info" linkPath="/artwork/minis" linkVar="" projectName="Miniatures" imagePath="placeholder"/>
+                    <CommonProjectPanel clazz="btn btn-info artworkTitlePanel" linkPath="/artwork/minis" linkVar="" projectName="Miniatures" imagePath="placeholder"/>
                 </Col>
             </Row>
         </Container>

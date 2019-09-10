@@ -46,13 +46,13 @@ class GaragePage extends Component{
                     <CommonProjectPanel clazz="btn btn-primary codePanel" imagePath='/img/projectsCode/thumbs/thumb_website2019.png' linkPath="/garage/project/" linkVar="9" projectName='Website: 2019' />                
                 </Col>
                 <Col md={{size:4}}>
-                    <CommonProjectPanel clazz="btn btn-success" imagePath='/img/projectsCode/thumbs/thumb_zond1.png' linkPath="/garage/project/" linkVar="4" projectName="Zond 1"/>
+                    <CommonProjectPanel clazz="btn btn-success commonProjectPanelSucces" imagePath='/img/projectsCode/thumbs/thumb_zond1.png' linkPath="/garage/project/" linkVar="4" projectName="Zond 1"/>
                 </Col>
                 <Col md={{size:4}}>
-                    <CommonProjectPanel clazz="btn btn-success" imagePath='/img/projectsCode/thumbs/thumb_website2015.png' linkPath="/garage/project/" linkVar="5" projectName="Website - 2015" />
+                    <CommonProjectPanel clazz="btn btn-success commonProjectPanelSucces" imagePath='/img/projectsCode/thumbs/thumb_website2015.png' linkPath="/garage/project/" linkVar="5" projectName="Website - 2015" />
                 </Col>
                 <Col md={{size:4}}>
-                    <CommonProjectPanel clazz="btn btn-success" imagePath='/img/projectsCode/thumbs/thumb_strikeralpha.png' linkPath="/garage/project/" linkVar="6" projectName="App - Striker Alpha"/>
+                    <CommonProjectPanel clazz="btn btn-success commonProjectPanelSucces" imagePath='/img/projectsCode/thumbs/thumb_strikeralpha.png' linkPath="/garage/project/" linkVar="6" projectName="App - Striker Alpha"/>
                 </Col>
                 <Col md={{size:4}}>
                     <CommonProjectPanel clazz="btn btn-secondary" imagePath='/img/projectsCode/thumbs/thumb_rigs.png' linkPath="/garage/project/" linkVar="7" projectName="BattleRigs" />
