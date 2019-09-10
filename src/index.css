@@ -1,9 +1,9 @@
 html {
-    background-color: gray;
+    background-color:#e1eaea;
 }
 
 body{
-    background-color: gray;
+    background-color: #e1eaea;
 }
 
 /* used for project buttons on code garage and board games page*/
@@ -17,5 +17,5 @@ body{
 }
 
 .pageBackground{
-    background-color: gray;
+    background-color: #e1eaea;
 }
