@@ -29,7 +29,7 @@ class ArtworkPageRecoilMain extends Component{
         </Row>
         <Row>
           <Col md={{size:8, offset:2}}>
-            <p><i>Recoil</i> is a science-fiction universe of my own design. It takes inspiration from the World War One era of history crossed with mecha and diesel-punk aesthetics. The story takes place in a star system far removed from Earth and possible the Milky Way. A human-run empire has take control of a colony world next door, and our main characters
+            <p><i>Recoil</i> is a science-fiction universe of my own design. It takes inspiration from the World War One era of history crossed with mecha and diesel-punk aesthetics. The story takes place in a star system far removed from Earth and possibly the Milky Way. A human-run empire has take control of a colony world next door, and our main characters
             are all mech pilots in an experimental squad for this empire.</p>
             <p>The entire project so far is contained to a series of sketches I've produced over the years starting around 2010. I've done some background writing but the sketches tell most of the story at this point.</p>
           </Col>

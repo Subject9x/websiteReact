@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Collapse} from 'reactstrap';
+import { Row, Col, Collapse, Button} from 'reactstrap';
 
 /*
 WebsiteReact
@@ -25,10 +25,12 @@ class ArtworkConceptsDropCharacters extends Component{
   render(){
     return(
       <div>
-        <input type="button" onClick={this.toggle} color="info" style={{marginBottom: '1rem'}} value="Various Characters"/>   
+        <Button onClick={this.toggle} color="info" style={{marginBottom: '1rem'}} >Various Characters</Button>   
         <Collapse isOpen={this.state.collapse}>
           <Row>
-            <Col md={{size:12}}>I've </Col>
+            <Col md={{size:12}}>In addition to my own work, I've also drawn characters for existing properties as fan art. It can be fun to play around in an existing fictional universe from time to time,
+            exploring your own take on certain themes and motifs. Other times its interesting to take the established aesthetics of a franchise and move them forward, find out why it works the way it does visually.
+            </Col>
           </Row>
           <Row>
             TODO - use CommonImagePanel on these guys

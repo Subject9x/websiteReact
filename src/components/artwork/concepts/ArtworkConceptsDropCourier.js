@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Collapse} from 'reactstrap';
+import { Row, Col, Collapse, Button } from 'reactstrap';
 
 /*
 WebsiteReact
@@ -24,13 +24,15 @@ class ArtworkConceptsDropCourier extends Component{
   render(){
     return(
       <div>
-        <input type="button" onClick={this.toggle} color="info" style={{marginBottom: '1rem'}} value="The Courier"/>   
+        <Button onClick={this.toggle} color="info" style={{marginBottom: '1rem'}}>The Courier Project</Button>
         <Collapse isOpen={this.state.collapse}>
           <Row>
-            <Col md={{size:12}}>The Courier was a mini-comic project collaboration between myself and an old coworker. </Col>
+            <Col md={{size:12}}>The Courier was a mini-comic project collaboration between myself and an old coworker. The goal was to produce an 8-page mini comic done out
+            completely from concept, layouts, penciling, then inking, and shading. I was the artist on the project; taking the script and creating the page layouts, concept art, 
+            and pencils. </Col>
           </Row>
           <Row>
-            TODO - use CommonImagePanel on these guys
+            TODO - use CommonImagePanel on these guys 
           </Row>
           <Row>
             <Col md={{size:3}}>Sample Page</Col>
