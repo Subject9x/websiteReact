@@ -24,7 +24,7 @@ const ProjectDataBoardGames = { "data" : [
                   ],
       "desc" : [
           "-Battlesuit- (name TBD) is a my first full effort to design and implement a board game. I created the first draft of the rules back in late 2014 and have built on those rules on-and-off over the past several years. The game is inspired by both tabletop wargaming and tournament fighter video games. I loved the idea of player-customizable move sets, and the fiddly rules that come with tabletop wargaming. I wanted to capture the feeling of commanding a powerful armored suit, but also not have the game take hours to play.",
-          "Currently on its 30th revision, the game has come a long way from those early days. I've learned much about how gameplay is taught, and how people react to a new game. I've planned a full release "
+          "Currently on its 30th revision, the game has come a long way from those early days. I've learned much about how gameplay is taught, and how people react to a new game. I've planned a full release which will include colored graphics for the Action Cards, custom artwork for the pawn pieces, tokens, etc."
       ],
       "mediaData" : [["some","rows"], ["some","rows"]]
   },
@@ -85,7 +85,7 @@ const ProjectDataBoardGames = { "data" : [
     "date" : "TODO",
     "team" : [
         {"name": "Peter Roohr"},
-        {"name":"Eamonn McHugh-Roohr", "url":"foo"}
+        {"name":"Eamonn McHugh-Roohr", "url":"http://eamonnmr.com"}
     ],
     "links" : [
     ],
