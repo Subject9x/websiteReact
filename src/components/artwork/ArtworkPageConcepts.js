@@ -5,8 +5,6 @@ import NavHeader from '../NavHeader';
 import ArtworkConceptsDropCourier from './concepts/ArtworkConceptsDropCourier';
 import ArtworkConceptsDropMecha from './concepts/ArtworkConceptsDropMecha';
 import ArtworkConceptsDropCharacters from './concepts/ArtworkConceptsDropCharacters';
-import CommonDropSection from '../common/CommonDropSection';
-import CommonImagePanel from '../common/CommonImagePanel';
 import CommonHeaderSpanner from '../common/CommonHeaderSpanner';
 
 /*

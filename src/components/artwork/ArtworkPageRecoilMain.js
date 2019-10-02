@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Container, Row, Col, Button} from 'reactstrap';
 
 import NavHeader from '../NavHeader';
-import CommonImagePanel from '../common/CommonImagePanel';
 import CommonHeaderSpanner from '../common/CommonHeaderSpanner';
 
 /*

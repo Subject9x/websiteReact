@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Collapse, Button} from 'reactstrap';
+import { Row, Col, Collapse} from 'reactstrap';
 
 /*
 WebsiteReact

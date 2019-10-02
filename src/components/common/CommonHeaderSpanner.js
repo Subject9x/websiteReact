@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Container, Col } from "reactstrap";
+import { Row, Col } from "reactstrap";
 
 
 class CommonHeaderSpanner extends Component{
