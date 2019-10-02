@@ -16,19 +16,13 @@ Overview:
 class ArtworkConceptsDropMecha extends Component{
   constructor(props){
     super(props);
-    this.toggle = this.toggle.bind(this);
     this.state = { collapse: false};
-  }
-
-  toggle(){
-    this.setState(state => ({collapse: !state.collapse}));
   }
 
   render(){
     return(
-      <div>
-        <Button onClick={this.toggle} color="info" style={{marginBottom: '1rem'}}>Mecha Concepts</Button>   
-        <Collapse isOpen={this.state.collapse}>
+      <div> 
+        <Collapse isOpen={this.props.open}>
           <Row>
             <Col md={{size:12}}>This section is a slice of my lifelong passion for giant fighting robots. Since an early age, I was enamored with idea of piloting walking tanks
             in almost any genre. Reinterpreting the look and feel of mecha from various properties is also something I've done as well. Several mecha franchises at this point are 

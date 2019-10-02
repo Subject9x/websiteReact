@@ -14,19 +14,13 @@ Overview:
 class ArtworkConceptsDropCharacters extends Component{
   constructor(props){
     super(props);
-    this.toggle = this.toggle.bind(this);
     this.state = { collapse: false};
-  }
-
-  toggle(){
-    this.setState(state => ({collapse: !state.collapse}));
   }
 
   render(){
     return(
       <div>
-        <Button onClick={this.toggle} color="info" style={{marginBottom: '1rem'}} >Various Characters</Button>   
-        <Collapse isOpen={this.state.collapse}>
+        <Collapse isOpen={this.props.open}>
           <Row>
             <Col md={{size:12}}>In addition to my own work, I've also drawn characters for existing properties as fan art. It can be fun to play around in an existing fictional universe from time to time,
             exploring your own take on certain themes and motifs. Other times its interesting to take the established aesthetics of a franchise and move them forward, find out why it works the way it does visually.

@@ -34,7 +34,13 @@ class ArtworkPageModelsMain extends Component{
         </Row>
         &nbsp;
         <Row>
-          <Col></Col>
+          <Col><CommonImagePanel src="test1" alt="some alt" className="mw-100"/></Col>
+          <Col><CommonImagePanel src="test2" alt="some alt" className="mw-100"/></Col>
+          <Col><CommonImagePanel src="test3" alt="some alt" className="mw-100"/></Col>
+          <Col><CommonImagePanel src="test4" alt="some alt" className="mw-100"/></Col>
+          <Col><CommonImagePanel src="test5" alt="some alt" className="mw-100"/></Col>
+          <Col><CommonImagePanel src="test6" alt="some alt" className="mw-100"/></Col>
+          <Col><CommonImagePanel src="test7" alt="some alt" className="mw-100"/></Col>
         </Row>
       </Container>
     );
