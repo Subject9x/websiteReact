@@ -28,7 +28,9 @@ class ArtworkPageMinisMain extends Component{
         </Row>
         &nbsp;
         <Row>
-          <Col md={{Size:8, offset:2}}>I have been playing tabletop wargames for a fairly long time. Originally brought in from trying out Warhammer 40k when I was younger, I now have a sizeable collection of miniatures across a range of games. Painting miniatures has become a very rewarding hobby for me, even if I don't get to play the games that often.</Col>
+          <Col md={{Size:8, offset:2}}>I have been playing tabletop wargames for a fairly long time. Originally brought in from trying out Warhammer 40k when I was younger, 
+          I now have a sizeable collection of miniatures across a range of games. Painting miniatures has become a very rewarding hobby for me, even if I don't get to play 
+          the games that often. I especially enjoy finding old and out-of-print miniatures to work on, giving life to forgotten or lesser known games and ideas. </Col>
         </Row>
         &nbsp;
         <Row>
