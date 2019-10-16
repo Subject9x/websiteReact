@@ -172,11 +172,11 @@ const CodeProjectPanelFeatures = (props) =>{
 }
 
 /*
-    Json data should be 2D array of media objects,
-        allowable objets
-            -> image, expandable
-            -> youtube link frame
-            -? maybe allow for some label text
+Json data should be 2D array of media objects,
+    allowable objets
+        -> image, expandable
+        -> youtube link frame
+        -? maybe allow for some label text
 */
 const CodeProjectPanelMediaSection = (props) =>{
     if(props.media === undefined || props.media.length <= 0){

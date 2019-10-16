@@ -71,7 +71,7 @@ class ArtworkPageConceptsMain extends Component{
           <Col md={{size:3, offset:2}}><Button onClick={this.toggleCourier} color="info" style={{marginBottom: '1rem'}}>The Courier Project</Button>   </Col>
           <Col md={{size:3}}><Button onClick={this.toggleMecha} color="info" style={{marginBottom: '1rem'}}>Mecha Concepts</Button></Col>
           <Col md={{size:3}}><Button onClick={this.toggleCharacters} color="info" style={{marginBottom: '1rem'}}>Various Characters</Button></Col>
-          <Col md={{size:2}}></Col>
+          <Col md={{size:1}}></Col>
         </Row>
         <Row>
           <Col md={{size:10, offset:1}}><ArtworkConceptsDropCourier open={this.state.openCourier}/></Col>
