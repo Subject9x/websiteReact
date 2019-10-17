@@ -16,46 +16,36 @@ Overview:
 class NavHeader extends Component{
     constructor(props) {
         super(props);
-        this.toggle = this.toggle.bind(this);
-        this.state = {
-          isOpen: false
-        };
     }
-    toggle() {
-        this.setState({
-            isOpen: !this.state.isOpen
-        });
-    }
-
     render(){
-        return(
-        <Row>
+    return(
+    <Row>
         <Col md={{size:12}}>
-            <Container id='fixed-top' fixed='top' className="container-fluid">
-                <Navbar color="secondary" light fixed='top' expand="md">
-                    <NavbarBrand href="/">Roohr Orbital Yards</NavbarBrand>
-                    <Nav className="ml-auto" navbar>
-                        <NavItem>
-                            <Link to="/garage"><Button>Code Garage</Button></Link>
-                        </NavItem>
-                        <NavItem>
-                            <Link to="/artwork/home"><Button>Artwork</Button></Link>
-                        </NavItem>
-                        <NavItem>
-                            <Link to="/boardgames"><Button>Board Games</Button></Link> 
-                        </NavItem>
-                        <NavItem>
-                            <Link to="/network"><Button>Network</Button></Link>
-                        </NavItem>
-                        <NavItem>
-                            <Link to="/about"><Button>About</Button></Link> 
-                        </NavItem>
-                    </Nav>
-                </Navbar>
-            </Container>
-         </Col>
-         </Row>
-        );
+        <Container id='fixed-top' fixed='top' className="container-fluid">
+            <Navbar color="secondary" light fixed='top' expand="md">
+                <NavbarBrand href="/">Roohr Orbital Yards</NavbarBrand>
+                <Nav className="ml-auto" navbar>
+                    <NavItem>
+                        <Link to="/garage"><Button>Code Garage</Button></Link>
+                    </NavItem>
+                    <NavItem>
+                        <Link to="/artwork/home"><Button>Artwork</Button></Link>
+                    </NavItem>
+                    <NavItem>
+                        <Link to="/boardgames"><Button>Board Games</Button></Link> 
+                    </NavItem>
+                    <NavItem>
+                        <Link to="/network"><Button>Network</Button></Link>
+                    </NavItem>
+                    <NavItem>
+                        <Link to="/about"><Button>About</Button></Link> 
+                    </NavItem>
+                </Nav>
+            </Navbar>
+        </Container>
+        </Col>
+    </Row>
+    );
     }
 }
 
